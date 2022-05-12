@@ -1,10 +1,10 @@
-import Products from "../Components/Products"
+import Listings from "../Components/Listings"
 
 
 function Index() {
     return (
         <div>
-            <Products />
+            <Listings />
         </div>
     )
 }

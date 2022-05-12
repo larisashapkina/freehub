@@ -1,9 +1,9 @@
-import ProductEditForm from "../Components/ProductEditForm";
+import ListingEditForm from "../Components/ListingEditForm";
 
 function Edit(){
     return(
         <div>
-            <ProductEditForm />
+            <ListingEditForm />
         </div>
     )
 };

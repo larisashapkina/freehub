@@ -1,9 +1,9 @@
-import ProductNew from "../Components/ProductNew";
+import ListingNew from "../Components/ListingNew";
  
 function New() {
     return(
         <div className="New">
-            <ProductNew />
+            <ListingNew />
         </div>
     )
 }
