@@ -1,8 +1,8 @@
 
-function Product () {
+function Listing () {
     return (
-        <div>Product</div>
+        <div>Listing </div>
     )
 }
 
-export default Product;
+export default Listing;
