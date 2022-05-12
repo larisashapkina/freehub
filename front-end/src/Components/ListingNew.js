@@ -1,7 +1,7 @@
 
 function ListingNew(){
     <div>
-        New Listing
+        New Listing New Form
     </div>
 }
 

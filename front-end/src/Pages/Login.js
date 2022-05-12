@@ -1,9 +1,10 @@
-import LoginForm from "../Components/LoginForm"
+import LoginForm from "../Components/LoginForm";
 
 function Login(){
     return (
         <div>
-          < LoginForm />
+            Hello login
+            <LoginForm/>
         </div>
     )
 }

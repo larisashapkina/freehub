@@ -1,7 +1,7 @@
 
 function Listing () {
     return (
-        <div>Listing </div>
+        <div>Listing details</div>
     )
 }
 

@@ -1,10 +1,13 @@
+import './Footer.css';
+
 
 function Footer(){
     return(
         <div className="footer">
-    <button>About Us </button>
-    <button>Contact Us</button>
-    </div>
+            <button>Contact Us</button>
+            <button>About Us</button>
+        </div>
     )
 }
-    export default Footer;
+
+export default Footer;
