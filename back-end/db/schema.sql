@@ -8,6 +8,7 @@ CREATE TABLE users (
     firstName TEXT NOT NULL,
     lastName TEXT NOT NULL,
     userName TEXT,
+    password TEXT,
     email TEXT NOT NULL
 );
 

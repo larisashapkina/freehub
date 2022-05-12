@@ -1,10 +1,10 @@
 \c users_dev;
 
-INSERT INTO users (firstName, lastName, userName, email) VALUES
-('Xiaoming', 'Yang', 'xmyang', 'xiaomingyang@pursuit.org'),
-('Sara', 'D''Arce', 'WildMsSara', 'saradarce@pursuit.org'),
-('Larisa', 'Shapkina', 'lshapki', 'larisashapking@pursuit.org'),
-('Stephanie', 'Reyes', 'sreyes1089', 'stephaniereyes@pursuit.org');
+INSERT INTO users (firstName, lastName, userName, password, email) VALUES
+('Xiaoming', 'Yang', 'xmyang', '********', 'xiaomingyang@pursuit.org'),
+('Sara', 'D''Arce', 'WildMsSara', '******', 'saradarce@pursuit.org'),
+('Larisa', 'Shapkina', 'lshapki', '************', 'larisashapking@pursuit.org'),
+('Stephanie', 'Reyes', 'sreyes1089', '*******', 'stephaniereyes@pursuit.org');
 
 INSERT INTO listings (user_id, category, title, description, image) VALUES
 ('1', 'Electronics', 'Apple iPhone 5 16GB', 'Great shape', 'https://cdn.vox-cdn.com/thumbor/haJH385wK6DDCmMuadVJ96k66CU=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/12798851/iphone-5.1419973710.jpg'),
@@ -13,5 +13,5 @@ INSERT INTO listings (user_id, category, title, description, image) VALUES
 ('2', 'Toys and Games', 'Universal Monster Studio 1992', 'Only half the monsters', 'https://thumbs.worthpoint.com/zoom/images1/1/0919/03/universal-studios-monsters-monster_1_ce5a695929fecefc7d8ce72ac49f774d.jpg'),
 ('3', 'Furniture', 'Retro Chair', 'Very sturdy, could afford to be cleaned a bit', 'https://gapropsource.com/Pictures/18/PS001918.jpg'),
 ('3', 'Art', 'Apple Pie Poster', 'Yummy', 'https://i.pinimg.com/564x/20/51/3d/20513d6a534af6d260a6f64f4457e8d1.jpg'),
-('4', 'Motors', 'Honda 750 Motorcycle 1992', 'Good Condition',  'https://bigbikereviews.com/wp-content/uploads/2021/07/black-1992-honda-nighthawk-750.jpg.webp')
+('4', 'Motors', 'Honda 750 Motorcycle 1992', 'Good Condition',  'https://bigbikereviews.com/wp-content/uploads/2021/07/black-1992-honda-nighthawk-750.jpg.webp'),
 ('4', 'Motors', 'Vintage White and Blue Speedboat', 'Circa 1971, Still works!', 'https://image.shutterstock.com/image-photo/plastic-mediterranean-style-boat-adriatic-260nw-5634100.jpg');
