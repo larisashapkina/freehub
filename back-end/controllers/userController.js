@@ -2,7 +2,7 @@ const listingController = require("./listingController.js");
 
 const express = require("express");
 const users = express.Router();
-const {} = require("../queries/users.js");
+const { getAllUsers, getUser, createUser, deleteUser, updateUser } = require("../queries/users.js");
 
 users.use("/:userId/listings", listingController);
 
@@ -49,7 +49,7 @@ users.post("/", async (req, res) => {
   }
 });
 
-Users.delete("/:id", async (req, res) => {
+users.delete("/:id", async (req, res) => {
   const { id } = req.params;
   const deletedUser = await deleteUser(id);
   if (deletedUser.id) {
