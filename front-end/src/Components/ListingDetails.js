@@ -1,7 +1,7 @@
 
 function ListingDetails(){
     <div>
-      Listing Detail 
+      Listing Detail with buttons
     </div>
 }
 
