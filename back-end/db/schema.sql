@@ -14,6 +14,7 @@ DROP TABLE IF EXISTS listings;
 
 CREATE TABLE listings (
     id SERIAL PRIMARY KEY,
+    category TEXT,
     title TEXT NOT NULL,
     description TEXT,
     image TEXT,
