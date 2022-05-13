@@ -7,15 +7,14 @@ const {
   newListing,
   deleteListing,
   updateListing,
-} = require("../queries/listings.js")
+} = require("../queries/listings.js");
 
 // INDEX
 listings.get("/", async (req, res) => {
   const { userId } = req.params;
 
   try {
-    const allListings = await getAllListings
-    (userId);
+    const allListings = await getAllListings(userId);
     res.json(allListings);
   } catch (err) {
     res.json(err);

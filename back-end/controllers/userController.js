@@ -12,7 +12,6 @@ const listingController = require("./listingController.js");
 
 users.use("/:userId/listings", listingController);
 
-// INDEX - Ask Greg if we need an index of users?
 users.get("/", async (req, res) => {
   try {
     const allUsers = await getAllUsers();

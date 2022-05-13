@@ -1,6 +1,6 @@
 \c users_dev;
 
-INSERT INTO users (firstName, lastName, userName, password, email) VALUES
+INSERT INTO users (firstname, lastname, username, password, email) VALUES
 ('Xiaoming', 'Yang', 'xmyang', '********', 'xiaomingyang@pursuit.org'),
 ('Sara', 'D''Arce', 'WildMsSara', '******', 'saradarce@pursuit.org'),
 ('Larisa', 'Shapkina', 'lshapki', '************', 'larisashapking@pursuit.org'),

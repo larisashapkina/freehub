@@ -5,9 +5,9 @@ CREATE DATABASE users_dev;
 
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
-    firstName TEXT NOT NULL,
-    lastName TEXT NOT NULL,
-    userName TEXT,
+    firstname TEXT NOT NULL,
+    lastname TEXT NOT NULL,
+    username TEXT NOT NULL,
     password TEXT,
     email TEXT NOT NULL
 );
