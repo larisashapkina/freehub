@@ -54,7 +54,7 @@ const deleteListing = async (id) => {
 const updateListing = async (id, listing) => {
   try {
     const updatedListing = await db.one(
-      "UPDATE listing SET category=$1, title=$2, description=$3, image=$4, user_id=$5 WHERE id=$6 RETURNING *",
+      "UPDATE listings SET category=$1, title=$2, description=$3, image=$4, user_id=$5 WHERE id=$6 RETURNING *",
       [
         listing.category,
         listing.title,
