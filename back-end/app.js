@@ -1,6 +1,7 @@
 // DEPENDENCIES
 const cors = require("cors");
 const express = require("express");
+const usersController = require("./controllers/userController.js");
 
 // CONFIGURATION
 const app = express();
@@ -8,13 +9,13 @@ const app = express();
 // MIDDLEWARE
 app.use(cors());
 app.use(express.json());
+require("dotenv").config();
 
 // ROUTES
 app.get("/", (req, res) => {
   res.send("Welcome to FreeHub");
 });
 
-const usersController = require("./controllers/userController.js");
 app.use("/users", usersController);
 
 // 404 PAGE
