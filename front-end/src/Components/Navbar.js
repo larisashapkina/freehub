@@ -11,7 +11,9 @@ function Navbar(){
        <button className="planet">
            <Link to="/savetheearth">Save the Planet Information</Link>
        </button>
-       <button className="listings"> Listings</button>
+       <button className="listings">
+           <Link to="/listings">Listings</Link>
+       </button>
        <button className="login">
            <Link to="/login">Login Page</Link>
          </button>

@@ -1,6 +1,9 @@
 // DEPENDENCIES
 const cors = require("cors");
 const express = require("express");
+const userController = require("./controllers/userController.js");
+const listingController = require("./controllers/listingController.js");
+
 
 // CONFIGURATION
 const app = express();
@@ -8,14 +11,15 @@ const app = express();
 // MIDDLEWARE
 app.use(cors());
 app.use(express.json());
+app.use("/users", userController);
+app.use("/listings", listingController);
 
 // ROUTES
 app.get("/", (req, res) => {
   res.send("Welcome to FreeHub");
 });
 
-const usersController = require("./controllers/userController.js");
-app.use("/users", usersController);
+
 
 // 404 PAGE
 app.get("*", (req, res) => {

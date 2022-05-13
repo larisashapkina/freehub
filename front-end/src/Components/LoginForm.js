@@ -1,7 +1,9 @@
 import { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function LoginForm(){
-
     const [user,setUser]=useState({
         firstName:"",
         lastName:"",
@@ -10,13 +12,27 @@ function LoginForm(){
         password:""
     })
 
+
+    const navigate = useNavigate();
+
     const handleTextChange = (event) => {
         setUser({ ...user, [event.target.id]: event.target.value });
     };
 
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        axios.post(`${process.env.REACT_APP_API_URL}/users`, user)
+          .then((res)=>{
+            console.log(res);
+            navigate("/userprofile");
+            
+          }).catch((err)=>{
+            console.log(err);
+          })
+    }; 
 
     return(
-        <form >
+        <form onSubmit={handleSubmit}>
         <label htmlFor="firstname">First Name:</label>
             <input
             id="firstName"
@@ -62,11 +78,14 @@ function LoginForm(){
             placeholder="password"
             />
             <br />
-            <input type="Submit" 
-            value="Login"/>
+            <Link to="/userprofile">
+                <input type="Submit" value="Login"/>     
+            </Link>
+           
         </form>
     )
 }
 
 export default LoginForm;
+
 
