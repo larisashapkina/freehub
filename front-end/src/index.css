@@ -21,3 +21,22 @@ code {
   height: 40px;
   background: grey;
 }
+
+.image{
+  float: left;
+    width:  100px;
+    height: 100px;
+    object-fit: cover;
+
+}
+.listings {
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* background-color:cornflowerblue; */
+  padding: 20px;
+  margin: 25px;
+  background-color:beige;
+  border-radius: 10px;
+  box-shadow: 3px 3px;
+  text-align: center;
+}

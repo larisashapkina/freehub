@@ -10,15 +10,14 @@ const app = express();
 // MIDDLEWARE
 app.use(cors());
 app.use(express.json());
-require("dotenv").config();
+app.use("/users", userController);
+app.use("/listings", listingController);
 
 // ROUTES
 app.get("/", (req, res) => {
   res.send("Welcome to FreeHub");
 });
 
-app.use("/users", userController);
-app.use("/listings", listingController);
 
 // 404 PAGE
 app.get("*", (req, res) => {

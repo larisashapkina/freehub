@@ -2,13 +2,15 @@ import {BrowserRouter as Router,Routes, Route} from  "react-router-dom";
 
 import Navbar from "./Components/Navbar";
 import Home from "./Pages/Home";
-import Index from "./Pages/Home";
+import Index from "./Pages/Index";
 import Show from "./Pages/Show";
 import New from "./Pages/New";
 import Edit from "./Pages/Edit";
 import SavetheEarth from "./Pages/SavetheEarth";
 import Login from "./Pages/Login";
 import Footer from "./Components/Footer";
+import UserProfile from "./Pages/UserProfile";
+
 
 
 function App() {
@@ -25,6 +27,7 @@ function App() {
               <Route path="/listings/new" element={<New />} />
               <Route path="/listings/:id/edit" element={ <Edit />} />
               <Route path="/login" element = {<Login/>}/>
+              <Route path ="/userprofile" element = {<UserProfile/>}/>
             </Routes>
           </main>
         </Router>

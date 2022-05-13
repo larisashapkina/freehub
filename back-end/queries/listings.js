@@ -1,10 +1,22 @@
 const db = require("../db/dbConfig.js");
 
-const getAllListings = async (user_id) => {
+const getUserListings = async (user_id) => {
   try {
-    const allListings = await db.any(
+    const allUserListings = await db.any(
       "SELECT * FROM listings WHERE user_id=$1",
       user_id
+    );
+    return allUserListings;
+  } catch (err) {
+    return err;
+  }
+};
+
+
+const getAllListings = async () => {
+  try {
+    const allListings = await db.any(
+      "SELECT * FROM listings",
     );
     return allListings;
   } catch (err) {
@@ -72,6 +84,7 @@ const updateListing = async (id, listing) => {
 
 module.exports = {
   getAllListings,
+  getUserListings,
   getListing,
   newListing,
   deleteListing,
