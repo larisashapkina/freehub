@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -95,9 +95,10 @@ function CreateAccForm() {
           onChange={handleTextChange}
           placeholder="email"
         />
-        <Link to="/userprofile">
+        <br />
+        {/* <Link to="/userprofile"> */}
           <input type="Submit" value="Create Account" />
-        </Link>
+        {/* </Link> */}
       </form>
     </div>
   );
