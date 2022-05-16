@@ -1,9 +1,5 @@
-function SavetheEarth(){
-    return(
-        <div>
-            Save the Earth Information
-        </div>
-    )
+function SavetheEarth() {
+  return <div>What else can I do?</div>;
 }
 
 export default SavetheEarth;
