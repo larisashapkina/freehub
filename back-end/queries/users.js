@@ -21,8 +21,8 @@ const getUser = async (id) => {
 const createUser = async (user) => {
   try {
     const newUser = await db.one(
-      "INSERT INTO users (firstname, lastname, username, password, email) VALUES($1, $2, $3, $4, $5) RETURNING *",
-      [user.firstname, user.lastname, user.username, user.password, user.email]
+      "INSERT INTO users (firstName, lastName, userName, password, email) VALUES($1, $2, $3, $4, $5) RETURNING *",
+      [user.firstName, user.lastName, user.userName, user.password, user.email]
     );
     return newUser;
   } catch (err) {

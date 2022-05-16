@@ -3,11 +3,15 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-function LoginForm (){
+function CreateAccForm(){
     const [user,setUser]=useState({
+        firstName:"",
+        lastName:"",
         userName:"",
+        email:"",
         password:""
     })
+
 
     const navigate = useNavigate();
 
@@ -19,15 +23,34 @@ function LoginForm (){
         event.preventDefault();
         axios.post(`${process.env.REACT_APP_API_URL}/users`, user)
           .then((res)=>{
+            console.log(res);
             navigate("/userprofile");
             
           }).catch((err)=>{
             console.log(err);
           })
     }; 
-        return (
-            <div>
-            <form onSubmit={handleSubmit}>
+
+    return(
+        <form onSubmit={handleSubmit}>
+        <label htmlFor="firstname">First Name:</label>
+            <input
+            id="firstName"
+            value={user.firstName}
+            type="text"
+            onChange={handleTextChange}
+            placeholder="first name"
+            />
+            <br />
+            <label htmlFor="lastname">Last Name:</label>
+            <input
+            id="lastName"
+            value={user.lastName}
+            type="text"
+            onChange={handleTextChange}
+            placeholder="last name"
+            />
+            <br />
             <label htmlFor="username">User Name:</label>
             <input
             id="userName"
@@ -35,6 +58,15 @@ function LoginForm (){
             type="text"
             onChange={handleTextChange}
             placeholder="user name"
+            />
+            <br />
+            <label htmlFor="email">E-mail:</label>
+            <input
+            id="email"
+            value={user.email}
+            type="text"
+            onChange={handleTextChange}
+            placeholder="email"
             />
             <br />
             <label htmlFor="password">Password:</label>
@@ -46,16 +78,14 @@ function LoginForm (){
             placeholder="password"
             />
             <br />
-            <Link to="/listings">
-                <input type="Submit" value="Log In"/>     
+            <Link to="/userprofile">
+                <input type="Submit" value="Create Account"/>     
             </Link>
-            <button className="createaccount">
-           <Link to="/createaccount">Create Account</Link>
-         </button>
+           
         </form>
+    )
+}
 
-            </div>
-        )
-        }
+export default CreateAccForm;
 
-export default LoginForm;
+
