@@ -9,13 +9,13 @@ function Navbar(){
             <Link to="/">Logo</Link>
        </button> 
        <button className="planet">
-           <Link to="/savetheearth">Save the Planet Information</Link>
+           <Link to="/savetheearth">Save the Planet</Link>
        </button>
        <button className="listings">
            <Link to="/listings">Listings</Link>
        </button>
-       <button className="login">
-           <Link to="/login">Login Page</Link>
+         <button className="login">
+           <Link to="/login">Login/Create Account </Link>
          </button>
     </div>
     )

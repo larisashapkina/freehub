@@ -7,7 +7,7 @@ function UserProfile(){
 
     return(
         <div>
-            Hello User!
+            {/* `Hello ${user.name}!` */}
             <button>New Listing</button>
         </div>
     )

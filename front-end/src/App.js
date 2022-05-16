@@ -7,9 +7,10 @@ import Show from "./Pages/Show";
 import New from "./Pages/New";
 import Edit from "./Pages/Edit";
 import SavetheEarth from "./Pages/SavetheEarth";
-import Login from "./Pages/Login";
+import CreateAccount from "./Pages/CreateAccount";
 import Footer from "./Components/Footer";
 import UserProfile from "./Pages/UserProfile";
+import Login from "./Pages/Login";
 
 
 
@@ -26,8 +27,9 @@ function App() {
               <Route path="/listings/:id" element={<Show />} />
               <Route path="/listings/new" element={<New />} />
               <Route path="/listings/:id/edit" element={ <Edit />} />
-              <Route path="/login" element = {<Login/>}/>
+              <Route path="/createaccount" element = {<CreateAccount/>}/>
               <Route path ="/userprofile" element = {<UserProfile/>}/>
+              <Route path="/login" element = {<Login/>}/>
             </Routes>
           </main>
         </Router>
