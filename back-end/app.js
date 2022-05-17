@@ -13,16 +13,15 @@ app.use(express.json());
 require("dotenv").config();
 app.use("/users", userController);
 app.use("/listings", listingController);
-// app.use("/listings", listingController);
 
 // ROUTES
 app.get("/", (req, res) => {
-  res.send("Welcome to FreeHub");
+	res.send("Welcome to FreeHub");
 });
 
 // 404 PAGE
 app.get("*", (req, res) => {
-  res.status(404).send("Page not found");
+	res.status(404).send("Page not found");
 });
 
 // EXPORT
