@@ -1,17 +1,16 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
-function CreateAccForm(){
+function CreateAccForm({accountUserName}){
     const [user,setUser]=useState({
-        firstName:"",
-        lastName:"",
-        userName:"",
+        firstname:"",
+        lastname:"",
+        username:"",
         email:"",
         password:""
     })
-
 
     const navigate = useNavigate();
 
@@ -23,20 +22,21 @@ function CreateAccForm(){
         event.preventDefault();
         axios.post(`${process.env.REACT_APP_API_URL}/users`, user)
           .then((res)=>{
-            console.log(res);
+            // console.log(res);
+            accountUserName(user.username);
             navigate("/userprofile");
-            
           }).catch((err)=>{
             console.log(err);
           })
     }; 
 
     return(
-        <form onSubmit={handleSubmit}>
-        <label htmlFor="firstname">First Name:</label>
+        <div>
+             <form onSubmit={handleSubmit}>
+            <label htmlFor="firstname">First Name:</label>
             <input
-            id="firstName"
-            value={user.firstName}
+            id="firstname"
+            value={user.firstname}
             type="text"
             onChange={handleTextChange}
             placeholder="first name"
@@ -44,8 +44,8 @@ function CreateAccForm(){
             <br />
             <label htmlFor="lastname">Last Name:</label>
             <input
-            id="lastName"
-            value={user.lastName}
+            id="lastname"
+            value={user.lastname}
             type="text"
             onChange={handleTextChange}
             placeholder="last name"
@@ -53,8 +53,8 @@ function CreateAccForm(){
             <br />
             <label htmlFor="username">User Name:</label>
             <input
-            id="userName"
-            value={user.userName}
+            id="username"
+            value={user.username}
             type="text"
             onChange={handleTextChange}
             placeholder="user name"
@@ -78,11 +78,11 @@ function CreateAccForm(){
             placeholder="password"
             />
             <br />
-            <Link to="/userprofile">
+            <div>
                 <input type="Submit" value="Create Account"/>     
-            </Link>
-           
+            </div>
         </form>
+        </div>
     )
 }
 
