@@ -3,7 +3,7 @@ const express = require("express");
 const listings = express.Router({ mergeParams: true });
 const {
   getAllListings,
-  getUserListings,
+  // getUsersListings,
   getListing,
   newListing,
   deleteListing,
@@ -12,28 +12,14 @@ const {
 
 // INDEX
 listings.get("/", async (req, res) => {
-  //const { userId } = req.params;
-
-  try {
-    const allListings = await getAllListings();
-    res.json(allListings);
-  } catch (err) {
-    res.json(err);
-  }
-});
-
-listings.get("/", async (req, res) => {
   const { userId } = req.params;
-
-  try {
-    const allUserListings = await getAllListings(userId);
-    res.json(allUserListings);
-    userId;
-  } catch (err) {
-    res.json(err);
+  const allListings = await getAllListings(userId);
+  if (allListings[0]) {
+    res.status(200).json(allListings);
+  } else {
+    res.status(500).json({ error: "server error" });
   }
 });
-
 
 // SHOW
 listings.get("/:id", async (req, res) => {
@@ -53,10 +39,11 @@ listings.put("/:id", async (req, res) => {
   if (updatedListing.id) {
     res.status(200).json(updatedListing);
   } else {
-    res.status(404).json("Listing not foundl");
+    res.status(404).json("Listing not found");
   }
 });
 
+// CREATE 
 listings.post("/", async (req, res) => {
   const listing = await newListing(req.body);
   res.status(200).json(listing);
