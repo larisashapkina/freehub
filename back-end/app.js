@@ -13,6 +13,7 @@ app.use(express.json());
 require("dotenv").config();
 app.use("/users", userController);
 app.use("/listings", listingController);
+// app.use("/listings", listingController);
 
 // ROUTES
 app.get("/", (req, res) => {
