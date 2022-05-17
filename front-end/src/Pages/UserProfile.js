@@ -1,13 +1,10 @@
+// import CreateAccForm from "../Components/CreateAccForm";
 
-
-
-function UserProfile(){
-
-    
+function UserProfile({userName}){
 
     return(
         <div>
-            {/* `Hello ${user.name}!` */}
+          Hello {userName}!
             <button>New Listing</button>
             
         </div>

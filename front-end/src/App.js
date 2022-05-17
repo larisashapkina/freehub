@@ -13,6 +13,12 @@ import UserProfile from "./Pages/UserProfile";
 import Login from "./Pages/Login";
 
 function App() {
+  const [username, setUsername] = useState("");
+
+  const accountUserName = (userName) => {
+    setUsername(userName);
+  };
+
   return (
     <div className="App">
       <Router>

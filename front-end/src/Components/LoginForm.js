@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function LoginForm (){
     const [user,setUser]=useState({
-        userName:"",
+        username:"",
         password:""
     })
 
@@ -30,8 +30,8 @@ function LoginForm (){
             <form onSubmit={handleSubmit}>
             <label htmlFor="username">User Name:</label>
             <input
-            id="userName"
-            value={user.userName}
+            id="username"
+            value={user.username}
             type="text"
             onChange={handleTextChange}
             placeholder="user name"

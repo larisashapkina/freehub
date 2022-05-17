@@ -1,20 +1,18 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-// import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
-const API = process.env.REACT_APP_API_URL;
-
-function CreateAccForm() {
-  let navigate = useNavigate();
-
+function CreateAccForm({ accountUserName }) {
   const [user, setUser] = useState({
     firstname: "",
     lastname: "",
     username: "",
-    password: "",
     email: "",
+    password: "",
   });
+
+  const navigate = useNavigate();
 
   const addUser = () => {
     axios
@@ -28,27 +26,22 @@ function CreateAccForm() {
       .catch((c) => console.warn("catch", c));
   };
 
-  const handleTextChange = (event) => {
-    setUser({ ...user, [event.target.id]: event.target.value });
-  };
-
   const handleSubmit = (event) => {
     event.preventDefault();
-    addUser();
+    axios
+      .post(`${process.env.REACT_APP_API_URL}/users`, user)
+      .then((res) => {
+        // console.log(res);
+        accountUserName(user.username);
+        navigate("/userprofile");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
-  //     axios
-  //       .post(`${API}/users`, user)
-  //       .then((res) => {
-  //         console.log(res);
-  //         navigate("/userprofile");
-  //       })
-  //       .catch((err) => {
-  //         console.log(err);
-  //       });
-  //   };
 
   return (
-    <div className="New">
+    <div>
       <form onSubmit={handleSubmit}>
         <label htmlFor="firstname">First Name:</label>
         <input
@@ -77,16 +70,6 @@ function CreateAccForm() {
           placeholder="user name"
         />
         <br />
-        <label htmlFor="password">Password:</label>
-        <input
-          id="password"
-          value={user.password}
-          type="text"
-          onChange={handleTextChange}
-          placeholder="password"
-        />
-        <br />
-        <br />
         <label htmlFor="email">E-mail:</label>
         <input
           id="email"
@@ -96,9 +79,18 @@ function CreateAccForm() {
           placeholder="email"
         />
         <br />
-        {/* <Link to="/userprofile"> */}
+        <label htmlFor="password">Password:</label>
+        <input
+          id="password"
+          value={user.password}
+          type="text"
+          onChange={handleTextChange}
+          placeholder="password"
+        />
+        <br />
+        <div>
           <input type="Submit" value="Create Account" />
-        {/* </Link> */}
+        </div>
       </form>
     </div>
   );

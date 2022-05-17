@@ -10,12 +10,13 @@ const {
 
 const listingController = require("./listingController.js");
 
-users.use("/:userId/listings", listingController);
+const { getUserListings } = require("../queries/listings.js");
+//users.use("/:userId/listings", listingController);
 
 users.get("/", async (req, res) => {
   try {
     const allUsers = await getAllUsers();
-    console.log(allUsers);
+    // console.log(allUsers);
     if (allUsers[0]) {
       res.status(200).json(allUsers);
     } else {
@@ -37,6 +38,17 @@ users.get("/:id", async (req, res) => {
     }
   } catch (err) {
     console.log(err);
+  }
+});
+
+//listings by user's id
+users.get("/:userId/listings", async (req, res) => {
+  const { userId } = req.params;
+  try {
+    const allUserListings = await getUserListings(userId);
+    res.json(allUserListings);
+  } catch (err) {
+    res.json(err);
   }
 });
 

@@ -1,6 +1,5 @@
 const express = require("express");
-
-const listings = express.Router({ mergeParams: true });
+const listings = express.Router();
 const {
   getAllListings,
   // getUsersListings,
@@ -10,7 +9,7 @@ const {
   updateListing,
 } = require("../queries/listings.js");
 
-// INDEX
+// get all listings
 listings.get("/", async (req, res) => {
   const { userId } = req.params;
   const allListings = await getAllListings(userId);
@@ -22,6 +21,15 @@ listings.get("/", async (req, res) => {
 });
 
 // SHOW
+//   try {
+//     const allListings = await getAllListings();
+//     res.json(allListings);
+//   } catch (err) {
+//     res.json(err);
+//   }
+// });
+
+// one listing by listing's id
 listings.get("/:id", async (req, res) => {
   const { id } = req.params;
   const listing = await getListing(id);
@@ -43,7 +51,7 @@ listings.put("/:id", async (req, res) => {
   }
 });
 
-// CREATE 
+// CREATE
 listings.post("/", async (req, res) => {
   const listing = await newListing(req.body);
   res.status(200).json(listing);
