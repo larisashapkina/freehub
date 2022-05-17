@@ -1,19 +1,15 @@
 const express = require("express");
-
-const listings = express.Router({ mergeParams: true });
+const listings = express.Router();
 const {
   getAllListings,
-  getUserListings,
   getListing,
   newListing,
   deleteListing,
   updateListing,
-} = require("../queries/listings.js")
+} = require("../queries/listings.js");
 
-// INDEX
+// get all listings
 listings.get("/", async (req, res) => {
-  //const { userId } = req.params;
-
   try {
     const allListings = await getAllListings();
     res.json(allListings);
@@ -22,29 +18,17 @@ listings.get("/", async (req, res) => {
   }
 });
 
-listings.get("/", async (req, res) => {
-  const { userId } = req.params;
-
-  try {
-    const allUserListings = await getAllListings(userId);
-    res.json(allUserListings);
-    userId;
-  } catch (err) {
-    res.json(err);
-  }
-});
-
-
-// SHOW
+// one listing by listing's id 
 listings.get("/:id", async (req, res) => {
-  const { id } = req.params;
-  const listing = await getListing(id);
-  if (listing) {
-    res.json(listing);
-  } else {
-    res.status(404).json({ error: "not found" });
-  }
-});
+    const { id } = req.params;
+    const listing = await getListing(id);
+    if (listing) {
+      res.json(listing);
+    } else {
+      res.status(404).json({ error: "not found" });
+    }
+  });
+
 
 // UPDATE
 listings.put("/:id", async (req, res) => {
