@@ -4,20 +4,21 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 function LoginForm (){
-    const [user,setUser]=useState({
-        username:"",
-        password:""
-    })
+    const [username,setUserName]=useState("");
+    const [password,setPassword]=useState("");
 
     const navigate = useNavigate();
 
+    
+
     const handleTextChange = (event) => {
-        setUser({ ...user, [event.target.id]: event.target.value });
+        setUserName({ ...username, [event.target.id]: event.target.value });
+        setPassword({ ...username, [event.target.id]: event.target.value });
     };
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.post(`${process.env.REACT_APP_API_URL}/users`, user)
+        axios.post(`${process.env.REACT_APP_API_URL}/users/login`, {username: username, password:password})
           .then((res)=>{
             navigate("/userprofile");
             
@@ -31,25 +32,24 @@ function LoginForm (){
             <label htmlFor="username">User Name:</label>
             <input
             id="username"
-            value={user.username}
+            value={username.username}
             type="text"
             onChange={handleTextChange}
-            placeholder="user name"
+            placeholder="username name"
             />
             <br />
             <label htmlFor="password">Password:</label>
             <input
             id="password"
-            value={user.password}
+            value={password.password}
             type="text"
             onChange={handleTextChange}
             placeholder="password"
             />
             <br />
-            <Link to="/listings">
-                <input type="Submit" value="Log In"/>     
-            </Link>
-            <button className="createaccount">
+            <input type="Submit" value="Log In"/>
+            <div>Don't have an account?</div>    
+                <button className="createaccount">
            <Link to="/createaccount">Create Account</Link>
          </button>
         </form>
