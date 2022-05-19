@@ -10,7 +10,6 @@ const { getUsersListings } = require("../queries/listings.js");
 users.get("/", async (req, res) => {
 	try {
 		const allUsers = await getAllUsers();
-		// console.log(allUsers);
 		if (allUsers[0]) {
 			res.status(200).json(allUsers);
 		} else {
