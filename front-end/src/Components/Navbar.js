@@ -17,6 +17,10 @@ function Navbar(){
          <button className="login">
            <Link to="/login">Login/Create Account </Link>
          </button>
+         <button className="myprofile">
+           <Link to="/userprofile">My profile </Link>
+         </button>
+
     </div>
     )
 }

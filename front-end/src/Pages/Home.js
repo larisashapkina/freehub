@@ -1,9 +1,11 @@
+import FeaturedListing from "../Components/FeaturedListing";
 
 
-function Home() {
+function Home({userName}) {
     return (
         <div>
-            <h1>Welcome to FreeHub!</h1>
+            <h1>Welcome to FreeHub {userName}!</h1>
+            <FeaturedListing/>
             
         </div>
     )

@@ -24,11 +24,12 @@ code {
 
 .image{
   float: left;
-    width:  100px;
-    height: 100px;
+    width:  150px;
+    height: 150px;
     object-fit: cover;
 
 }
+
 .listings {
   display:grid;
   grid-template-columns: repeat(3, 1fr);
@@ -39,4 +40,25 @@ code {
   border-radius: 10px;
   box-shadow: 3px 3px;
   text-align: center;
+}
+
+.feature{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  margin-top: 100px;
+  gap: 15px;
+}
+
+.welcome {
+  text-align: center;
+}
+
+.feature-details{
+  display: grid;
+ grid-template-rows: auto;
+}
+
+.buttons{
+  /* display: inline-block; */
+  padding:2%
 }

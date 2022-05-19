@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-function LoginForm (){
+function LoginForm ({setUserName}){
     const [user,setUser]=useState({
         username:"",
         password:""
@@ -17,19 +17,21 @@ function LoginForm (){
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.post(`${process.env.REACT_APP_API_URL}/users`, user)
-          .then((res)=>{
-            navigate("/userprofile");
-            
-          }).catch((err)=>{
-            console.log(err);
-          })
+        console.log("test");
+        setUserName(user.username);
+        navigate("/");
+    //     axios.post(`${process.env.REACT_APP_API_URL}/users`, user)
+    //       .then((res)=>{
+           
+    //       }).catch((err)=>{
+    //         console.log(err);
+    //       })
     }; 
         return (
             <div>
             <form onSubmit={handleSubmit}>
             <label htmlFor="username">User Name:</label>
-            <input
+            <input required
             id="username"
             value={user.username}
             type="text"
@@ -38,7 +40,7 @@ function LoginForm (){
             />
             <br />
             <label htmlFor="password">Password:</label>
-            <input
+            <input required
             id="password"
             value={user.password}
             type="text"
@@ -46,14 +48,12 @@ function LoginForm (){
             placeholder="password"
             />
             <br />
-            <Link to="/listings">
                 <input type="Submit" value="Log In"/>     
-            </Link>
+           
             <button className="createaccount">
            <Link to="/createaccount">Create Account</Link>
          </button>
         </form>
-
             </div>
         )
         }

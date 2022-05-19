@@ -22,11 +22,24 @@ function Listings() {
         }, [id, API]);
 
     return(
-    <div className="listings">
-        {listings.map((listing)=>{
-            return < Listing  key ={listing.id} listing = {listing}/>
-        })}
-    </div>
+        <div>
+            <div className="buttons">
+                <button>Furniture</button>
+                <button>Electronics</button>
+                <button>Clothing, Shoes, Jewelry</button>
+                <button>Home, Garden, Tools</button>
+                <button>Motors</button>
+                <button>Toys & Games</button>
+                <button>Beauty & Games</button>
+                <button>Art</button>
+            </div>
+            <div className="listings">
+            {listings.map((listing)=>{
+                return < Listing  key ={listing.id} listing = {listing}/>
+            })}
+            </div>
+        </div>
+    
     )
 }
 

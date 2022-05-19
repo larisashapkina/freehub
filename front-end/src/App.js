@@ -14,11 +14,8 @@ import UserProfile from "./Pages/UserProfile";
 import Login from "./Pages/Login";
 
 function App() {
-	const [username, setUsername] = useState("");
+	const [username, setUserName] = useState("");
 
-	const accountUserName = (userName) => {
-		setUsername(userName);
-	};
 
 	return (
 		<div className="App">
@@ -26,15 +23,15 @@ function App() {
 				<Navbar />
 				<main>
 					<Routes>
-						<Route path="/" element={<Home />} />
+						<Route path="/" element={<Home userName = {username}/>} />
 						<Route path="savetheearth" element={<SavetheEarth />} />
 						<Route path="/listings" element={<Index />} />
 						<Route path="/listings/:id" element={<Show />} />
 						<Route path="/listings/new" element={<New />} />
 						<Route path="/listings/:id/edit" element={<Edit />} />
-						<Route path="/createaccount" element={<CreateAccount />} />
-						<Route path="/userprofile" element={<UserProfile />} />
-						<Route path="/login" element={<Login />} />
+						<Route path="/createaccount" element={<CreateAccount setUserName={setUserName}/>} />
+						<Route path="/userprofile" element={<UserProfile userName ={username}/>} />
+						<Route path="/login" element={<Login setUserName={setUserName} userName = {username}/>} />
 					</Routes>
 				</main>
 			</Router>
