@@ -1,29 +1,22 @@
 const express = require("express");
 const users = express.Router();
-const {
-  getAllUsers,
-  getUser,
-  createUser,
-  deleteUser,
-  updateUser,
-} = require("../queries/users.js");
+const { getAllUsers, getUser, createUser, deleteUser, updateUser, loginUser } = require("../queries/users.js");
 
 // const userListingsController = require("./controllers/userListingsController.js");
 const { getUsersListings } = require("../queries/listings.js");
 // users.use("/:userId/listings", listingController);
 
 users.get("/", async (req, res) => {
-  try {
-    const allUsers = await getAllUsers();
-    // console.log(allUsers);
-    if (allUsers[0]) {
-      res.status(200).json(allUsers);
-    } else {
-      res.status(500).json({ error: "Server error" });
-    }
-  } catch (err) {
-    console.log(err);
-  }
+	try {
+		const allUsers = await getAllUsers();
+		if (allUsers[0]) {
+			res.status(200).json(allUsers);
+		} else {
+			res.status(500).json({ error: "Server error" });
+		}
+	} catch (err) {
+		console.log(err);
+	}
 });
 
 //listings by user's id
@@ -65,6 +58,22 @@ users.post("/", async (req, res) => {
     console.log(err);
   }
 });
+
+users.post("/login", async (req,res)=>{
+    console.log("trigger")
+   const {username , password} = req.body;
+   try{
+       const loggedUser = await loginUser(username, password)
+       console.log(loggedUser)
+   if(loggedUser.username && loggedUser.password) {
+       res.status(200).json(loggedUser)
+   }else {
+       res.status(500).json({error: "Wrong Password or Username! "});
+   }
+   }catch (error){
+       console.log(error);
+   }
+})
 
 users.delete("/:id", async (req, res) => {
   const { id } = req.params;

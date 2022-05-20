@@ -17,28 +17,28 @@ import SearchResults from "./Components/SearchResults";
 function App() {
   const [username, setUsername] = useState("");
 
-    // const accountUserName = (userName) => {
-    //   setUsername(userName);
-    // };
+  // const accountUserName = (userName) => {
+  //   setUsername(userName);
+  // };
 
   return (
     <>
-	<Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/search" element={<SearchResults />} />
-        <Route path="savetheearth" element={<SavetheEarth />} />
-        <Route path="/listings" element={<Index />} />
-        <Route path="/listings/:id" element={<Show />} />
-		<Route path="/listings/new" element={<New />} />
-		<Route path="/listings/:id/edit" element={<Edit />} />
-		<Route path="/createaccount" element={<CreateAccount />} />
-		<Route path="/userprofile" element={<UserProfile />} />
-		<Route path="/login" element={<Login />} />
-      </Routes>
-      <Footer />
-	</Router>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/search" element={<SearchResults />} />
+          <Route path="savetheearth" element={<SavetheEarth />} />
+          <Route path="/listings" element={<Index />} />
+          <Route path="/listings/:id" element={<Show />} />
+          <Route path="/listings/new" element={<New />} />
+          <Route path="/listings/:id/edit" element={<Edit />} />
+          <Route path="/createaccount" element={<CreateAccount />} />
+          <Route path="/userprofile" element={<UserProfile />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+        <Footer />
+      </Router>
     </>
   );
 }

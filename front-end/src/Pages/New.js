@@ -1,10 +1,10 @@
-import ListingNew from "../Components/ListingNew";
+import ListingNewForm from "../Components/ListingNewForm";
  
 function New() {
     return(
         <div className="New">
             <h2>Listing New Form</h2>
-            <ListingNew />
+            <ListingNewForm />
         </div>
     )
 }
