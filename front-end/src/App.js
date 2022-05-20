@@ -15,18 +15,14 @@ import Login from "./Pages/Login";
 import SearchResults from "./Components/SearchResults";
 
 function App() {
-  const [username, setUsername] = useState("");
-
-  // const accountUserName = (userName) => {
-  //   setUsername(userName);
-  // };
+  const [username] = useState("");
 
   return (
     <>
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home userName={username} />} />
           <Route path="/search" element={<SearchResults />} />
           <Route path="savetheearth" element={<SavetheEarth />} />
           <Route path="/listings" element={<Index />} />
@@ -34,8 +30,11 @@ function App() {
           <Route path="/listings/new" element={<New />} />
           <Route path="/listings/:id/edit" element={<Edit />} />
           <Route path="/createaccount" element={<CreateAccount />} />
-          <Route path="/userprofile" element={<UserProfile />} />
-          <Route path="/login" element={<Login />} />
+          <Route
+            path="/userprofile"
+            element={<UserProfile userName={username} />}
+          />
+          <Route path="/login" element={<Login userName={username} />} />
         </Routes>
         <Footer />
       </Router>
