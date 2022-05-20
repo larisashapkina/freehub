@@ -6,6 +6,7 @@ const { getAllListings, getListing, newListing } = require("../queries/listings.
 listings.get("/", async (req, res) => {
   try {
     const allListings = await getAllListings();
+    console.log(allListings);
     if (allListings[0]) {
       res.status(200).json(allListings);
     } else {

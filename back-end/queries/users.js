@@ -30,6 +30,18 @@ const createUser = async (user) => {
   }
 };
 
+const loginUser = async(user) => {
+  try {
+    const userLogin = await db.one(
+      "SELECT * FROM users WHERE username=$1 AND password=$2",
+      [user.username, user.password]
+    );
+    return userLogin;
+  } catch (err){
+    return err;
+  }
+};
+
 const deleteUser = async (id) => {
   try {
     const deletedUser = await db.one(
@@ -67,4 +79,5 @@ module.exports = {
   createUser,
   deleteUser,
   updateUser,
+  loginUser
 };
