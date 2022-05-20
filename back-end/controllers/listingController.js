@@ -4,10 +4,10 @@ const { getAllListings, getListing } = require("../queries/listings.js");
 
 // get all listings
 listings.get("/", async (req, res) => {
-  console.log("trigger");
+  // console.log("trigger");
   try {
     const allListings = await getAllListings();
-    console.log(allListings);
+    // console.log(allListings);
     if (allListings[0]) {
       res.status(200).json(allListings);
     } else {
@@ -20,7 +20,9 @@ listings.get("/", async (req, res) => {
 
 listings.get("/:id", async (req, res) => {
   const { id } = req.params;
+  // console.log("Trigger");
   const listing = await getListing(id);
+  // console.log(listing)
   if (listing) {
     res.json(listing);
   } else {

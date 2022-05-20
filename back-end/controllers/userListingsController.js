@@ -3,7 +3,6 @@ const listings = express.Router();
 const {
   getAllListings,
   // getUsersListings,
-  getListing,
   newListing,
   deleteListing,
   updateListing,
@@ -25,9 +24,7 @@ listings.get("/", async (req, res) => {
   }
 });
 
-// SHOW
-
-// one listing by listing's id
+// SHOW one listing by listing's id
 // listings.get("/:id", async (req, res) => {
 //   const { id } = req.params;
 //   const listing = await getListing(id);
@@ -38,6 +35,12 @@ listings.get("/", async (req, res) => {
 //   }
 // });
 
+// CREATE
+listings.post("/", async (req, res) => {
+  const listing = await newListing(req.body);
+  res.status(200).json(listing);
+});
+
 // UPDATE
 listings.put("/:id", async (req, res) => {
   const { id } = req.params;
@@ -47,12 +50,6 @@ listings.put("/:id", async (req, res) => {
   } else {
     res.status(404).json("Listing not found");
   }
-});
-
-// CREATE
-listings.post("/", async (req, res) => {
-  const listing = await newListing(req.body);
-  res.status(200).json(listing);
 });
 
 // DELETE

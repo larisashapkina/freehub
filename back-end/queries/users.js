@@ -61,6 +61,7 @@ const updateUser = async (id, user) => {
   }
 };
 
+
 module.exports = {
   getAllUsers,
   getUser,

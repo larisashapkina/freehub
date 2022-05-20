@@ -1,10 +1,28 @@
-.navbar  *{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1em;
-    /* box-shadow: 2px 2px 4px grey; */
-    margin-bottom: 1em;
-    display: inline;
+/* Navbar -----------------------------------*/
+#navbar {
+   border: 1px solid black;
+   display: grid;
+   grid-template-columns: 1fr, 1fr, 1fr;
+   justify-items: center;
+   padding: 20px;
 }
+.navbar #logo {
+    display: block;
+    max-width: 100%;
+    margin: auto;
+    background-color: hsl(0, 0%, 90%);
+    transition: background-color 300ms;
+}
+/* Navbar -----------------------------------*/
+
+/* Navbar -----------------------------------*/
+#home-image {
+    border: 1px solid black;
+    height: 500px;
+    background: url("");
+    background-size: cover;
+    opacity: 6;
+}
+
+
 

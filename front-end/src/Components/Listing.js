@@ -10,8 +10,7 @@ function Listing ({listing }) {
                 <div>{listing.description}</div>
                 <img className="image" src={listing.image} alt={listing.title}/>
             </Link>
-        </div>
-        
+        </div> 
        
     )
 }
