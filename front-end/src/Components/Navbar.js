@@ -15,12 +15,14 @@ function Navbar(){
            <Link to="/listings">Listings</Link>
        </button>
          <button className="login">
-           <Link to="/login">Login/Create Account </Link>
+           <Link to="/login">Login </Link>
          </button>
-         <button className="myprofile">
+         {/* <button className="createaccount">
+           <Link to="/createaccount">Create Account </Link>
+         </button> */}
+         <button className="userprofile">
            <Link to="/userprofile">My profile </Link>
          </button>
-
     </div>
     )
 }

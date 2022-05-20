@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function CreateAccForm({setUserName}){
     const [user,setUser]=useState({
@@ -22,7 +22,6 @@ function CreateAccForm({setUserName}){
         event.preventDefault();
         axios.post(`${process.env.REACT_APP_API_URL}/users`, user)
           .then((res)=>{
-            // console.log(res);
             setUserName(user.username);
             navigate("/");
           }).catch((err)=>{
@@ -81,6 +80,9 @@ function CreateAccForm({setUserName}){
             <div>
                 <input type="Submit" value="Create Account"/>     
             </div>
+            {/* <button className="createaccount">
+           <Link to="/createaccount">Create Account</Link>
+         </button> */}
         </form>
         </div>
     )

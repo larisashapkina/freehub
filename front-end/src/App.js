@@ -14,8 +14,8 @@ import UserProfile from "./Pages/UserProfile";
 import Login from "./Pages/Login";
 
 function App() {
+	
 	const [username, setUserName] = useState("");
-
 
 	return (
 		<div className="App">

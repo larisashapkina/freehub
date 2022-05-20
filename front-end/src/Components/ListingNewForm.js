@@ -32,14 +32,19 @@ function ListingNew(){
         <div>
             New Listing Form
             <form onSubmit={handleSubmit}>
-                <label htmlFor="name">Listing Category</label>
-                <input required
-                id="category"
-                value={listing.category}
-                type="text"
-                onChange={handleTextChange}
-                placeholder="Listing Category"
-                />
+                <label htmlFor="name">Category: 
+                <select id ="listing-category" name="category">
+                    <option>--Select a category--</option>
+                    <option>Furniture</option>
+                    <option>Electronics</option>
+                    <option>Clothing</option>
+                    <option>Home</option>
+                    <option>Motors</option>
+                    <option>Toys</option>
+                    <option>Beauty</option>
+                    <option>Art</option>
+                </select>
+                </label>
                 <label htmlFor="title">Title:</label>
                 <input
                 id="title"

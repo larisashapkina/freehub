@@ -4,7 +4,6 @@ function Login({setUserName}) {
   return (
     <div>
       Login
-
       <LoginForm setUserName={setUserName}/>
     </div>
   );
