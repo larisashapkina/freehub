@@ -2,9 +2,13 @@ import Listings from "../Components/Listings";
 
 function Index() {
   return (
-    <div>
-      <Listings />
-    </div>
+    <main>
+      <div id="listings-main-content">
+          <div id="featured-listings">Featured Listings (Carousel?)</div>
+            <div id="listings-banner-image"></div>
+          <Listings />
+      </div>
+    </main>
   );
 }
 

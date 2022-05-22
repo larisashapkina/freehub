@@ -23,10 +23,10 @@ function ListingDetails() {
 
   return (
     <div>
+        <h6>{listing.category}</h6>
       <div className="listing-details">
-        <h3>{listing.title}</h3>
-        <h5>{listing.category}</h5>
         <img className="image" src={listing.image} alt={listing.title} />
+        <h6>{listing.title}</h6>
         <p>{listing.description}</p>
       </div>
       <div>

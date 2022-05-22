@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
+import "./Featured.css";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -25,13 +26,11 @@ function FeaturedListing() {
     <div className="featured">
       {featuredlisting.map((listing) => (
         <div className="featured-details">
-          <div>
-            {" "}
-            <Link to={`/listings/${listing.id}`}>
-              <img className="image" src={listing.image} alt={listing.title} />
-            </Link>
-          </div>
-          <h3>{listing.title}</h3>
+          {" "}
+          <Link to={`/listings/${listing.id}`}>
+            <img className="image" src={listing.image} alt={listing.title} />
+          </Link>
+          <h5>{listing.title}</h5>
           <p>{listing.description}</p>
         </div>
       ))}

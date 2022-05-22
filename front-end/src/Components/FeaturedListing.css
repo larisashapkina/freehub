@@ -1,0 +1,6 @@
+.featured {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  margin-top: 100px;
+  gap: 15px;
+}

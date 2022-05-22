@@ -1,9 +1,9 @@
 function Home() {
   return (
     <main>
-      <div>{/* < FeaturedListing />  */}</div>
+      <div id="featured-listings">{/* < FeaturedListing />  */}Featured Listings</div>
       <div id="home-image">
-        <div id="home-image-text"></div>
+        {/* <div id="home-image-text"></div> */}
       </div>
       <div id="main-content">
         <div id="listings-view">Listings</div>

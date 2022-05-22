@@ -1,35 +1,42 @@
 /* Navbar -----------------------------------*/
 #navbar {
-   display: grid;
-   grid-template-columns: 1fr 2fr 2fr;
-   justify-items: center;
-   padding: 15px;
-}
-#navbar #logo a {
-    font-weight: 500;
-    border: 1px solid teal;
     background-color: teal;
-    padding: 0 10px;
-    margin: auto;
+    opacity: .5;
+    display: grid;
+    grid-template-columns: 1fr 3fr 5fr;
+    justify-items: center;
+    align-items: center;
+    padding: 15px;
+}
+
+#nav-buttons {
+    background-color: white;
+    border-radius: 5px;
+    padding: 4px;
+    border: solid white;
+    color: white
+}
+
+#navbar #logo a {
+    justify-items: left;
+    font-size: 40px;
+    font-weight: 540;
+    border: 3px solid white;
+    border-radius: 5px;
+    background-color: green;
+    padding: 8px;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
-    font-size: large;
-    text-decoration: double;
 }
 
-/* #navbar .logo {
-    display: block;
-    max-width: 100%;
-    margin: auto;
-    background-color: hsl(0, 0%, 90%);
-    transition: background-color 300ms;
-} */
-
+#featured-listings {
+    border: 1px solid teal;
+}
 
 a {
     padding: 0 10px;
     text-decoration: none;
-    color: darkslategrey;
+    color: rgb(31, 53, 53);
     font-size: 15px bold;
 }
 
@@ -52,8 +59,8 @@ a:hover {
 /* Home Image -----------------------------------*/
 
 #home-image {
-    height: 500px;
-    background: url("https://www.concertmagnet.com/wp-content/uploads/2022/05/Screenshot-2022-05-21-at-1.10.42-PM.png");
+    height: 650px;
+    background: url("https://www.concertmagnet.com/wp-content/uploads/2022/05/Screenshot-2022-05-21-at-1.10.42-PM.png") no-repeat center;
     background-size: cover;
 }
 /* Home Image -----------------------------------*/

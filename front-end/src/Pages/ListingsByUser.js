@@ -1,13 +1,11 @@
-import ListingDetails from "../Components/ListingDetails/userId="
+import ListingDetails from "../Components/ListingDetails/userId=";
 
-
-function Show(){
-    return (
-        <div>
-            <h2>Listing Details</h2>
-            < ListingDetails />
-        </div>
-    )
+function Show() {
+  return (
+    <div>
+      <ListingDetails />
+    </div>
+  );
 }
 
-export default Show 
+export default Show;
