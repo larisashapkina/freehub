@@ -5,7 +5,7 @@ function UserProfile({userName}){
 
     return(
         <div>
-          Hello {userName}!
+          Hey {userName}!
             <button className="New-listing">
                 <Link to="/listings/new">New Listing</Link>
             </button>

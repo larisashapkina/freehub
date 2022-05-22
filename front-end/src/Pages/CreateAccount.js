@@ -3,7 +3,7 @@ import CreateAccForm from "../Components/CreateAccForm";
 function Account({ setUserName }) {
   return (
     <div>
-      Please create account
+       Create Account
       <CreateAccForm setUserName={setUserName} />
     </div>
   );

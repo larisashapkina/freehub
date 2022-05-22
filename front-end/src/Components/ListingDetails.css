@@ -1,0 +1,14 @@
+.listing-details {
+    box-shadow: -6px -6px 10px -5px;
+    /* border: 1px solid red; */
+    width: 350px;
+    text-align: center;
+    background-color: white;
+  }
+
+  .image{
+    float: left;
+      width:  150px;
+      height: 150px;
+      object-fit: cover;
+  }

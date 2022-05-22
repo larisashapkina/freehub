@@ -2,8 +2,8 @@ import ListingNewForm from "../Components/ListingNewForm";
  
 function New() {
     return(
-        <div className="New">
-            <h2>Listing New Form</h2>
+        <div className="form">
+            <h4>Create a New Listing</h4>
             <ListingNewForm />
         </div>
     )

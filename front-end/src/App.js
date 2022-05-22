@@ -7,12 +7,13 @@ import Index from "./Pages/Index";
 import Show from "./Pages/Show";
 import New from "./Pages/New";
 import Edit from "./Pages/Edit";
-import SavetheEarth from "./Pages/SavetheEarth";
+import SaveYourWorld from "./Pages/SaveYourWorld";
 import CreateAccount from "./Pages/CreateAccount";
 import Footer from "./Components/Footer";
 import UserProfile from "./Pages/UserProfile";
 import Login from "./Pages/Login";
 import SearchResults from "./Components/SearchResults";
+import "./App.css";
 
 function App() {
   const [username] = useState("");
@@ -24,7 +25,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home userName={username} />} />
           <Route path="/search" element={<SearchResults />} />
-          <Route path="savetheearth" element={<SavetheEarth />} />
+          <Route path="/saveyourworld" element={<SaveYourWorld />} />
           <Route path="/listings" element={<Index />} />
           <Route path="/listings/:id" element={<Show />} />
           <Route path="/listings/new" element={<New />} />

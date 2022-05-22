@@ -5,31 +5,36 @@ import { useNavigate, Link } from "react-router-dom";
 const API = process.env.REACT_APP_API_URL;
 
 function FeaturedListing() {
-
   const [featuredlisting, setFeaturedlisting] = useState([]);
 
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`${API}/listings`)
+    axios
+      .get(`${API}/listings`)
       .then((res) => {
-        console.log(res.data)
+        console.log(res.data);
         setFeaturedlisting(res.data);
-      }).catch(() =>{
-        navigate("/not-found");
       })
+      .catch(() => {
+        navigate("/not-found");
+      });
   }, []);
 
   return (
-    <div className="feature">
+    <div className="featured">
       {featuredlisting.map((listing) => (
-                    <div className="feature-details">
-                     <div> <Link to={`/listings/${listing.id}`}><img className="image" src={listing.image} alt={listing.title}/></Link>
-                     </div>
-                      <div>{listing.title}</div>
-                      <div>{listing.description}</div>
-                  </div>
-           ))}
+        <div className="featured-details">
+          <div>
+            {" "}
+            <Link to={`/listings/${listing.id}`}>
+              <img className="image" src={listing.image} alt={listing.title} />
+            </Link>
+          </div>
+          <h3>{listing.title}</h3>
+          <p>{listing.description}</p>
+        </div>
+      ))}
     </div>
   );
 }

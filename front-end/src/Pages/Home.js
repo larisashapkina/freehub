@@ -2,7 +2,7 @@ function Home() {
   return (
     <main>
       <div id="home-image">
-        <div id="home-image-text">Rethink. Reduce. Reuse.</div>
+        <div id="home-image-text"></div>
       </div>
       <div id="main-content">
         {/* < FeaturedListing />  */}

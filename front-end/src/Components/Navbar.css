@@ -1,28 +1,63 @@
 /* Navbar -----------------------------------*/
-#navbar {
-   border: 1px solid black;
-   display: grid;
-   grid-template-columns: 1fr, 1fr, 1fr;
-   justify-items: center;
-   padding: 20px;
+#navbar #logo a {
+    font-weight: 500;
+    border: 1px solid teal;
+    background-color: teal;
+    padding: 0 10px;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: large;
+    text-decoration: double;
 }
-.navbar #logo {
+
+#navbar {
+   display: grid;
+   grid-template-columns: 1fr 2fr 2fr;
+   justify-items: center;
+   padding: 15px;
+}
+/* #navbar .logo {
     display: block;
     max-width: 100%;
     margin: auto;
     background-color: hsl(0, 0%, 90%);
     transition: background-color 300ms;
+} */
+
+
+a {
+    padding: 0 10px;
+    text-decoration: none;
+    color: darkslategrey;
+    font-size: 15px bold;
+}
+
+a:hover {
+    color: black;
+}
+
+#search-input {
+    padding: 0 0 0 0;
+    width: 250px;
+    height: 26px;
+}
+
+#search-button {
+    width: 75px;
+    height: 30px;
 }
 /* Navbar -----------------------------------*/
 
-/* Navbar -----------------------------------*/
+/* Home Image -----------------------------------*/
+
 #home-image {
-    border: 1px solid black;
     height: 500px;
-    background: url("");
+    background: url("https://www.concertmagnet.com/wp-content/uploads/2022/05/Screenshot-2022-05-21-at-1.10.42-PM.png");
     background-size: cover;
-    opacity: 6;
 }
+/* Home Image -----------------------------------*/
+
 
 
 
