@@ -1,4 +1,10 @@
 /* Navbar -----------------------------------*/
+#navbar {
+   display: grid;
+   grid-template-columns: 1fr 2fr 2fr;
+   justify-items: center;
+   padding: 15px;
+}
 #navbar #logo a {
     font-weight: 500;
     border: 1px solid teal;
@@ -11,12 +17,6 @@
     text-decoration: double;
 }
 
-#navbar {
-   display: grid;
-   grid-template-columns: 1fr 2fr 2fr;
-   justify-items: center;
-   padding: 15px;
-}
 /* #navbar .logo {
     display: block;
     max-width: 100%;
