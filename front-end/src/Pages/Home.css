@@ -7,50 +7,14 @@
 }
 
 #main-content {
+    background-color: rgb(182, 236, 236);
     border: 1px solid teal;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    height: 110px;
-    background-color: rgb(236, 247, 247);
-    /* text-align: center;
-    font-size: 30px;
-    padding: 30px;
-    display: grid;
-    grid-template-columns: 2fr 1fr;        
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "featured catmenu" */
 }
 
 #featured-listings {
-  /* border: 1px solid teal;
-  height: 50px;
-  grid-area: featured; */
+  text-align: top left;
+  font-size: 30px;
+  color: white;
+  border: 1px solid teal;
+  height: 100px;
 }   
-
-#categories-menu {
-    /* border: 1px solid teal;
-    height: 50px;
-    grid-area: catmenu; */
-}
-/* #home-listings-container {
-    border: 2px solid rebeccapurple;
-    grid-area: listings;
-  }
-  
-  .listings-banner-image {
-      background: url("https://www.concertmagnet.com/wp-content/uploads/2022/05/Screenshot-2022-05-21-at-1.07.59-PM-300x77.png");
-      grid-area: banner;
-  }
-  
-  .listings-container {
-      border: 3px solid teal;
-      border-style: double;
-      padding: 25px;
-      /* background-size: cover;
-      height: 300px; */
-      /* display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      row-gap: 20px;
-      justify-items: center;
-      } */ 
