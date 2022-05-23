@@ -1,5 +1,7 @@
 #listingCard {
+  background-color: whitesmoke;
   border: 1px solid darkgrey;
+  border-radius: 5px;
   padding: 10px;
   width: 350px;
   text-align: left;

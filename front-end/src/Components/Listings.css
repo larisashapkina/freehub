@@ -1,50 +1,5 @@
-
-#main-content {
-  gap: 1px;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: auto;
-  grid-template-areas: 
-  "featured catmenu"
-  "home home"
-  "home home"
-  "listings listings"
-  "listings listings"
-  "listings listings";
-}
-
-#home-image {
-  border: 2px solid teal;
-  height: 650px;
-  background: url("https://www.concertmagnet.com/wp-content/uploads/2022/05/Screenshot-2022-05-21-at-1.10.42-PM.png") no-repeat center;
-  background-size: cover;
-  grid-area: home;
-}
-
-#featured-listings {
-  gap: 2px;
-  height: 150px;
-  border: 1px solid teal;
-  grid-area: featured;
-}
-
-
-#categories-menu {
-border: 1px solid teal;
-grid-area: catmenu;
-}
-
-#home-listings-container {
-  border: 2px solid rebeccapurple;
-  grid-area: listings;
-}
-
-.listings-banner-image {
-    background: url("https://www.concertmagnet.com/wp-content/uploads/2022/05/Screenshot-2022-05-21-at-1.07.59-PM-300x77.png");
-    grid-area: banner;
-}
-
 .listings-container {
+    background-color: rgb(236, 247, 247);
     border: 3px solid teal;
     border-style: double;
     padding: 25px;
@@ -56,6 +11,50 @@ grid-area: catmenu;
     justify-items: center;
     }
 
+/* #main-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "featured catmenu"
+  "banner banner"
+  "listings listings"
+  "listings listings"
+  "listings listings";
+} */
+
+/* #home-image {
+  border: 2px solid teal;
+  height: 650px;
+  background: url("https://www.concertmagnet.com/wp-content/uploads/2022/05/Screenshot-2022-05-21-at-1.10.42-PM.png") no-repeat center;
+  background-size: cover;
+  grid-area: home;
+} */
+
+/* #featured-listings {
+  gap: 2px;
+  height: 150px;
+  border: 1px solid teal;
+  grid-area: featured;
+} */
+
+
+/* #categories-menu {
+border: 1px solid teal;
+grid-area: catmenu;
+} */
+
+/* #home-listings-container {
+  border: 2px solid rebeccapurple;
+  grid-area: listings;
+} */
+
+.listings-banner-image {
+    background: url("https://www.concertmagnet.com/wp-content/uploads/2022/05/Screenshot-2022-05-21-at-1.07.59-PM-300x77.png");
+    grid-area: banner;
+}
+
+
     /* .featured {
   display: grid;
   grid-template-columns: repeat(3,1fr);
@@ -64,30 +63,4 @@ grid-area: catmenu;
 } */
 
     
-    /* padding: 20px;
-    margin: 25px;
-    border-radius: 10px;
-    box-shadow: 3px 3px;
-    text-align: center; */
-
-/* #listings-container {
-  grid-area: hero-con;
-  gap: 60px;
-}  
-
-  #hero-display{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "hero-con ul";
-  justify-items: center;
-}
-
-#hero-form{
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-#hero-ul{
-  grid-area: ul;
-}
- */
+   

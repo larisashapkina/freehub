@@ -1,3 +1,4 @@
+
 /* Navbar -----------------------------------*/
 #navbar {
     background-color: teal;
@@ -54,9 +55,13 @@ a:hover {
     width: 75px;
     height: 30px;
 }
-/* Navbar -----------------------------------*/
 
-
-
+/* #home-image {
+    border: 2px solid teal;
+    height: 650px;
+    background: url("https://www.concertmagnet.com/wp-content/uploads/2022/05/Screenshot-2022-05-21-at-1.10.42-PM.png") no-repeat center;
+    background-size: cover;
+    grid-area: home;
+  } */
 
 

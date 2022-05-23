@@ -37,6 +37,7 @@ const SearchResults = () => {
         <Link to="/listings">Listings</Link>&nbsp;&nbsp;
       </div>
     </div>
+        
   );
 };
 
