@@ -1,0 +1,29 @@
+
+#main-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "sowi actions"
+  }
+  
+  #save-our-world-image {
+    height: 550px;
+    background: url("https://www.concertmagnet.com/wp-content/uploads/2022/05/recycle-with-sky-and-grass-300x189.jpeg") no-repeat center;
+    background-size: cover;
+    grid-area: sowi;
+  }
+  
+  #actions-checklist {
+      background: url("https://www.concertmagnet.com/wp-content/uploads/2022/05/Screenshot-2022-05-23-at-12.55.35-AM-300x300.png") no-repeat;
+      background-size: 450px;
+      background-position-y: 47px;
+      width: 100%;
+      padding: 10px 10px 0px 10px;
+      /* width: 100%;
+      position: fixed;
+      bottom: 0; */
+      grid-area: actions;
+    }
+   
+  

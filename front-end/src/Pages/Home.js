@@ -1,14 +1,22 @@
+import Listings from "../Components/Listings";
+
 function Home() {
   return (
     <main>
-      <div id="featured-listings">{/* < FeaturedListing />  */}Featured Listings</div>
-      <div id="home-image">
-        {/* <div id="home-image-text"></div> */}
-      </div>
       <div id="main-content">
-        <div id="listings-view">Listings</div>
-        <div id="account-overview">Account Overview</div>
-        <div id="browse-by-category">Browse by Category</div>
+        <div id="home-image"></div>
+        <div id="categories-menu">Browse by Category</div>
+        <div id="featured-listings">
+          Featured Listings (Carousel?)
+          {/* <FeaturedListing /> */}
+        </div>
+        <div id="home-listings-container">
+          Browse All Listings
+          <div id="listings-banner-image">
+            {/* <div id="listings-banner-image-text"></div> */}
+          </div>
+          <Listings />
+        </div>
       </div>
     </main>
   );

@@ -1,13 +1,13 @@
-import Listing from "./Listing";
+// import Listing from "./Listing";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import "./Listings.css";
+import "./CategoryMenu.css";
 
 const API = process.env.REACT_APP_API_URL;
 
-function Listings() {
-  const [listings, setListings] = useState([]);
+function CategoryMenu() {
+//   const [listings, setListings] = useState([]);
   const [seletedCategory, setSeletedCategory] = useState("");
   let { id } = useParams();
   useEffect(() => {
@@ -46,13 +46,12 @@ function Listings() {
           <button onClick={() => setSeletedCategory("Beauty")}>Beauty </button>
           <button onClick={() => setSeletedCategory("Art")}>Art</button>
         </div>
-        <div className="listings-container">
+        {/* <div className="listings-container">
           {filterResults.map((listing) => {
             return <Listing key={listing.id} listing={listing} />;
           })}
-        </div>
-
+        </div> */}
     </main>
   );
 }
-export default Listings;
+export default CategoryMenu;
