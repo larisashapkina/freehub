@@ -10,20 +10,15 @@ function Listings() {
     const [listings, setListings] = useState([]);
     const [seletedCategory, setSeletedCategory] = useState("");
     let { id } = useParams();
+    
     useEffect(() => {
         axios.get(`${API}/listings`)
         .then((response) => {
-            console.log(response.data);
+            //console.log(response.data);
             setListings(response.data);
         });
         }, [id, API]);
         
-        // const filterResult=(catItem)=>{
-        //         const result =  listings.filter((dat)=>{
-        //         return dat.category===catItem;
-        //     })
-        //     setListings(result);
-        // }
         const filterResults = listings.filter((data)=>{
             if(seletedCategory==="")return true;
             return data.category === seletedCategory;
@@ -41,11 +36,11 @@ function Listings() {
                 <button onClick={()=>setSeletedCategory('Beauty')}>Beauty </button>
                 <button onClick={()=>setSeletedCategory('Art')}>Art</button>
             </div>
-    <div className="listings">
-        {filterResults.map((listing)=>{
-            return < Listing  key ={listing.id} listing = {listing}/>
-        })}
-    </div>
+        <div className="listings">
+            {filterResults.map((listing)=>{
+                return < Listing  key ={listing.id} listing = {listing}/> 
+            })}
+        </div>
     </div>
     )
 }

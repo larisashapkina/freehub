@@ -16,7 +16,7 @@ import Login from "./Pages/Login";
 function App() {
 	
 	const [username, setUserName] = useState("");
-
+ 
 	return (
 		<div className="App">
 			<Router>
@@ -30,7 +30,7 @@ function App() {
 						<Route path="/listings/new" element={<New />} />
 						<Route path="/listings/:id/edit" element={<Edit />} />
 						<Route path="/createaccount" element={<CreateAccount setUserName={setUserName}/>} />
-						<Route path="/userprofile" element={<UserProfile userName ={username}/>} />
+						<Route path="/userprofile/:id" element={<UserProfile userName ={username}/>} />
 						<Route path="/login" element={<Login setUserName={setUserName} userName = {username}/>} />
 					</Routes>
 				</main>
