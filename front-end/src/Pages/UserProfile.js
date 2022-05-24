@@ -18,9 +18,9 @@ function UserProfile({userName}){
         });
         }, [id, API]);
 
-    // const handleDelete = ()  =>{
-    //     axios.
-    // }      
+   const handleDelete = ()  =>{
+        axios.delete(API + "/users/{")
+    }       
 
 
     const mappedListings = userlistings.map((listing)=>{
