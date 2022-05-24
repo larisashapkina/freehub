@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Listing from '../Components/Listing';
 import axios from "axios";
 import { useState, useEffect} from "react";
@@ -9,6 +9,7 @@ const API = process.env.REACT_APP_API_URL;
 function UserProfile({userName}){
     const [userlistings, setUserlistings] = useState([]);
     let { id } = useParams();
+    let navigate = useNavigate();
 
     useEffect(() => {
         axios.get(`${API}/users/${id}/listings`)
@@ -19,7 +20,12 @@ function UserProfile({userName}){
         }, [id, API]);
 
    const handleDelete = ()  =>{
-        axios.delete(API + "/users/{")
+        axios.delete(`${API} + /users/${id}/listings/${id}`)
+        .then((response)=>{
+            navigate(`/users/${id}/listings`)
+        }).catch((err)=>{
+            console.log(err);
+        })
     }       
 
 

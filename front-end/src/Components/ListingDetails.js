@@ -42,7 +42,7 @@ function ListingDetails(){
          </Link>
          <br/>
            <br/>
-                <a href="mailto:{user.email}">Contact about this item{user.email}</a> 
+                <a href={"mailto:"+ user.email}>Contact about this item{user.email}</a> 
        </div>
     </div>
   )
