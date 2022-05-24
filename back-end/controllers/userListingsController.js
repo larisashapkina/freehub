@@ -3,10 +3,7 @@ const listings = express.Router();
 const {
   getAllListings,
   // getUsersListings,
-  getListing,
   newListing,
-  deleteListing,
-  updateListing,
 } = require("../queries/listings.js");
 
 // get all listings
@@ -38,16 +35,16 @@ listings.get("/", async (req, res) => {
 //   }
 // });
 
-// UPDATE
-listings.put("/:id", async (req, res) => {
-  const { id } = req.params;
-  const updatedListing = await updateListing(id, req.body);
-  if (updatedListing.id) {
-    res.status(200).json(updatedListing);
-  } else {
-    res.status(404).json("Listing not found");
-  }
-});
+// // UPDATE
+// listings.put("/:id", async (req, res) => {
+//   const { id } = req.params;
+//   const updatedListing = await updateListing(id, req.body);
+//   if (updatedListing.id) {
+//     res.status(200).json(updatedListing);
+//   } else {
+//     res.status(404).json("Listing not found");
+//   }
+// });
 
 // CREATE
 listings.post("/", async (req, res) => {
@@ -55,16 +52,16 @@ listings.post("/", async (req, res) => {
   res.status(200).json(listing);
 });
 
-// DELETE
-listings.delete("/:id", async (req, res) => {
-  const { id } = req.params;
+// // DELETE
+// listings.delete("/:id", async (req, res) => {
+//   const { id } = req.params;
 
-  const deletedListing = await deleteListing(id);
-  if (deletedListing.id) {
-    res.status(200).json(deletedListing);
-  } else {
-    res.status(404).json({ error: "Listing not found" });
-  }
-});
+//   const deletedListing = await deleteListing(id);
+//   if (deletedListing.id) {
+//     res.status(200).json(deletedListing);
+//   } else {
+//     res.status(404).json({ error: "Listing not found" });
+//   }
+// });
 
 module.exports = listings;

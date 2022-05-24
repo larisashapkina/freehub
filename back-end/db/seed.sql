@@ -5,12 +5,12 @@ INSERT INTO users (firstname, lastname, username, password, email) VALUES
 ('Sara', 'D''Arce', 'WildMsSara', '123245345', 'saradarce@pursuit.org'),
 ('Larisa', 'Shapkina', 'lshapki', '1234567890', 'larisashapking@pursuit.org'),
 ('Stephanie', 'Reyes', 'sreyes1089', '99872365', 'stephaniereyes@pursuit.org'),
-('John', 'Reez', 'maninasuit', '324234', 'jreez6742@nbc.com'),
-('Sameen', 'Hsaw', 'xmyang', '9385733', 'sammhsaw@cbs.com'),
+('John', 'Reez', 'maninasuit', '324234', 'jreez6742@aol.com'),
+('Sameen', 'Hsaw', 'xmyang', '9385733', 'sammhsaw@gmail.com'),
 ('Lionel', 'Fusco', 'goodcop', '937423462', 'lionfusco@cbs.com'),
 ('Tom', 'Anderson', 'tanderson', '342324582374', 'tanderson3721@gmail.com'),
-('Harold', 'Finch', 'csgenius', '2343432', 'haroldf@nbc.com'),
-('Joss', 'Carter', 'detective', '432353443', 'josscar@nbc.com');
+('Harold', 'Finch', 'csgenius', '2343432', 'haroldf@gmail.com'),
+('Joss', 'Carter', 'detective', '432353443', 'josscar@yahoo.com');
 
 
 

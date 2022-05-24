@@ -61,7 +61,6 @@ users.post("/", async (req, res) => {
 });
 
 users.post("/login", async (req,res)=>{
-    console.log("trigger")
    const {username , password} = req.body;
    try{
        const loggedUser = await loginUser(username, password)
