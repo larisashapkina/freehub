@@ -2,10 +2,12 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import Error from "./loginError";
 
-function LoginForm ({setUserName}){
+function LoginForm ({setUserName,setText}){
     const [username,setUserNamee]=useState("");
     const [password,setPassword]=useState("");
+    const [error, setError] = useState("");
 
     const navigate = useNavigate();
 
@@ -19,14 +21,17 @@ function LoginForm ({setUserName}){
         setUserName(username.username);
         axios.post(`${process.env.REACT_APP_API_URL}/users/login`, {username: username, password:password})
           .then((res)=>{
+            localStorage.setItem("userId",`${res.data.id}`)
+            setText("Logout");
             navigate(`/userprofile/${res.data.id}`);
           }).catch((err)=>{
-            console.log(err);
+            setError(err.response.data.error);
           })
          };
 
         return (
             <div>
+                <Error error={error}/>
                 <form onSubmit={handleSubmit}>
                 <label htmlFor="username">User Name:</label>
                 <input

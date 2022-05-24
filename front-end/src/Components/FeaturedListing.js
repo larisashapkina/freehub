@@ -27,7 +27,7 @@ function FeaturedListing() {
             <div> <Link to={`/listings/${id}`}><img className="image" src={image} alt={listing.title}/></Link>
             </div>
             <div>{title}</div>
-            <div>{description}</div>
+            {/* <div>{description}</div> */}
  </div>
   })
   return (

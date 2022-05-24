@@ -33,11 +33,9 @@ function UserProfile({userName}){
         return <div className="userlistings">
                 <div>{listing.title}</div>
                 <img className="image" src={listing.image} alt={listing.title}/>
-                <button>Delete</button>
+                <button onClick ={handleDelete}>Delete</button>
                 <button>Edit</button>
-            </div>
-     
-            
+            </div>   
                 
     })
     return(
