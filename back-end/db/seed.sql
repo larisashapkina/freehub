@@ -1,10 +1,10 @@
 \c users_dev;
 
 INSERT INTO users (firstname, lastname, username, password, email) VALUES
-('Xiaoming', 'Yang', 'xmyang', '12344', 'xiaomingyang@pursuit.org'),
-('Sara', 'D''Arce', 'WildMsSara', '123245345', 'saradarce@pursuit.org'),
-('Larisa', 'Shapkina', 'lshapki', '1234567890', 'larisashapking@pursuit.org'),
-('Stephanie', 'Reyes', 'sreyes1089', '99872365', 'stephaniereyes@pursuit.org'),
+('Xiaoming', 'Yang', 'xmyang', '12345', 'xiaomingyang@pursuit.org'),
+('Sara', 'D''Arce', 'SaraDArce', '12345', 'saradarce@pursuit.org'),
+('Larisa', 'Shapkina', 'lshapkina', '12345', 'larisashapking@pursuit.org'),
+('Stephanie', 'Reyes', 'sreyes1089', '12345', 'stephaniereyes@pursuit.org'),
 ('John', 'Reez', 'maninasuit', '324234', 'jreez6742@nbc.com'),
 ('Sameen', 'Hsaw', 'xmyang', '9385733', 'sammhsaw@cbs.com'),
 ('Lionel', 'Fusco', 'goodcop', '937423462', 'lionfusco@cbs.com'),
@@ -30,7 +30,7 @@ INSERT INTO listings (user_id, category, title, description, image) VALUES
 ('1', 'Toys', 'Vintage Barbie Dolls', 'Well loved and cared for', 'https://barbiedollmint.com/image/1960-s-Huge-Vintage-Barbie-Dolls-Lot-Clothes-Accessories-1960-s-Free-Shipping-02-hhd.jpg'),
 ('1', 'Toys', 'Building Toys for Toddlers', 'Well loved and cared for', 'https://m.media-amazon.com/images/I/81LjVUb4lfL._AC_UL320_.jpg'),
 ('2', 'Sports', '1956 YANKEES WORLD SERIES TEAM SIGNED BASEBALL - ALL HoFs - 28 Sigs POSTER', 'Desirable condition', 'https://scontent-lga3-2.xx.fbcdn.net/v/t1.6435-9/131943100_10165476888425643_4835709211047916789_n.jpg?stp=dst-jpg_p720x720&_nc_cat=102&ccb=1-6&_nc_sid=b9115d&_nc_ohc=hI1dZnGzh44AX-2e7rJ&_nc_oc=AQl7PECUwAReKk25a6B2V3-WtZyziRms8rBK7zYk6KDZpCIeBWF57xPQvC4AASaG5qR2_wi7_HIGQmywEejP_pwN&tn=3dQlI0iHUKxfkZwA&_nc_ht=scontent-lga3-2.xx&oh=00_AT8JgYY7dZ7TIn8v_uq_23cJB0RbWd1hxk41ov97xQiccw&oe=62A315F7'),
-('2', 'Toys', 'Universal Monster Studio 1992', 'Only half the monsters', 'https://thumbs.worthpoint.com/zoom/images1/1/0919/03/universal-studios-monsters-monster_1_ce5a695929fecefc7d8ce72ac49f774d.jpg'),
+('2', 'Toys', 'Universal Monster Studio 1992', 'Only half the monsters', 'https://www.concertmagnet.com/wp-content/uploads/2022/05/Screenshot-2022-05-24-at-12.32.55-AM-300x210.png'),
 ('2', 'Toys', 'Wonder Woman Kids Bandages, 100 ct', 'Wear Like Stickers', 'https://m.media-amazon.com/images/S/abs-image-upload-na/6/AmazonStores/ATVPDKIKX0DER/6b2d377bee59f5a2677cc8311fa38810.w750.h750._CR0%2C0%2C750%2C750_SX320_SY320_.jpg'),
 ('2', 'Electronics', 'Sony 28 Inch 4K Ultra HD TV X90K Series', 'BRAVIA XR Full Array LED Smart Google TV', 'https://m.media-amazon.com/images/I/81KOr7zrq-L._AC_SX425_.jpg'),
 ('2', 'Furniture', '5 Drawer Dresser Long Wide Chest of Drawers', 'Living Room, Bedroom, Hallway, Nursery, Kid', 'https://m.media-amazon.com/images/I/81YknWLq-pL._AC_SX569_.jpg'),

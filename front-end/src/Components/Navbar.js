@@ -14,7 +14,7 @@ const SearchResults = () => {
         <div id="logo">
           <Link to="/">FreeHub</Link>
         </div>
-      <div id="nav-and-search">
+      <div id="search">
         <form className="search-form">
           <input
             id="search-input"
@@ -36,7 +36,8 @@ const SearchResults = () => {
         <Link to="/userprofile">My Account</Link>&nbsp;&nbsp;
         <Link to="/listings">Listings</Link>&nbsp;&nbsp;
       </div>
-    </div>
+      <div id="climate"><climate-clock /></div>
+    </div>  
         
   );
 };

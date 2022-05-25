@@ -20,7 +20,7 @@ function LoginForm ({setUserName}){
         setUserName(username.username);
         axios.post(`${process.env.REACT_APP_API_URL}/users/login`, {username: username, password:password})
           .then((res)=>{
-            navigate("/userprofile");
+            navigate(`/userprofile/${res.data.id}`);
           }).catch((err)=>{
             console.log(err);
           })
@@ -54,8 +54,9 @@ function LoginForm ({setUserName}){
                 </button>
                 </form>
             </div>
-        )
+          )
         }
+        
 export default LoginForm;
 
 

@@ -4,29 +4,28 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "./Listings.css";
 
+
 const API = process.env.REACT_APP_API_URL;
 
 function Listings() {
+
   const [listings, setListings] = useState([]);
   const [seletedCategory, setSeletedCategory] = useState("");
   let { id } = useParams();
-  useEffect(() => {
-    axios.get(`${API}/listings`).then((response) => {
-      console.log(response.data);
-      setListings(response.data);
-    });
-  }, [id]);
 
-  // const filterResult=(catItem)=>{
-  //         const result =  listings.filter((dat)=>{
-  //         return dat.category===catItem;
-  //     })
-  //     setListings(result);
-  // }
+  useEffect(() => {
+      axios.get(`${API}/listings`)
+      .then((response) => {
+          //console.log(response.data);
+          setListings(response.data);
+      });
+      }, [id, API]);
+      
   const filterResults = listings.filter((data) => {
     if (seletedCategory === "") return true;
     return data.category === seletedCategory;
   });
+  
   return (
     <main>
         <div className="categories-menu">
@@ -51,7 +50,6 @@ function Listings() {
             return <Listing key={listing.id} listing={listing} />;
           })}
         </div>
-
     </main>
   );
 }

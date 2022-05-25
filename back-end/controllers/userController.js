@@ -2,9 +2,9 @@ const express = require("express");
 const users = express.Router();
 const { getAllUsers, getUser, createUser, deleteUser, updateUser, loginUser } = require("../queries/users.js");
 
-// const userListingsController = require("./controllers/userListingsController.js");
+const userListingsController = require("./userListingsController.js");
 const { getUsersListings } = require("../queries/listings.js");
-// users.use("/:userId/listings", listingController);
+users.use("/:userId/listings", userListingsController);
 
 users.get("/", async (req, res) => {
 	try {
@@ -17,18 +17,6 @@ users.get("/", async (req, res) => {
 	} catch (err) {
 		console.log(err);
 	}
-});
-
-//listings by user's id
-users.get("/:userId/listings", async (req, res) => {
-  const { userId } = req.params;
-  try {
-    const allUserListings = await getUsersListings(userId);
-    console.log(allUserListings);
-    res.json(allUserListings);
-  } catch (err) {
-    res.json(err);
-  }
 });
 
 users.get("/:id", async (req, res) => {
@@ -45,6 +33,19 @@ users.get("/:id", async (req, res) => {
   }
 });
 
+//listings by user's id
+// users.get("/:userId/listings", async (req, res) => {
+//   const { userId } = req.params;
+//   try {
+//     const allUserListings = await getUsersListings(userId);
+//     console.log(allUserListings);
+//     res.json(allUserListings);
+//   } catch (err) {
+//     res.json(err);
+//   }
+// });
+
+
 users.post("/", async (req, res) => {
   const { body } = req;
   try {
@@ -59,21 +60,6 @@ users.post("/", async (req, res) => {
   }
 });
 
-users.post("/login", async (req,res)=>{
-    console.log("trigger")
-   const {username , password} = req.body;
-   try{
-       const loggedUser = await loginUser(username, password)
-       console.log(loggedUser)
-   if(loggedUser.username && loggedUser.password) {
-       res.status(200).json(loggedUser)
-   }else {
-       res.status(500).json({error: "Wrong Password or Username! "});
-   }
-   }catch (error){
-       console.log(error);
-   }
-})
 
 users.delete("/:id", async (req, res) => {
   const { id } = req.params;
@@ -95,5 +81,21 @@ users.put("/:id", async (req, res) => {
     res.status(404).json({ error: "User not found" });
   }
 });
+
+users.post("/login", async (req,res)=>{
+    console.log("trigger")
+   const {username , password} = req.body;
+   try{
+       const loggedUser = await loginUser(username, password)
+       console.log(loggedUser)
+   if(loggedUser.username && loggedUser.password) {
+       res.status(200).json(loggedUser)
+   }else {
+       res.status(500).json({error: "Wrong Password or Username! "});
+   }
+   }catch (error){
+       console.log(error);
+   }
+})
 
 module.exports = users;

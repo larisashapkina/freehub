@@ -7,10 +7,11 @@
   }
 
   .image{
-    float: top;
-      width:  150px;
-      height: 150px;
-      object-fit: cover;
+    justify-items: right;
+    padding: 20px;
+    width:  80px;
+    height: 80px;
+    object-fit: cover;
   }
 
   h6 {

@@ -3,6 +3,7 @@ const cors = require("cors");
 const express = require("express");
 const userController = require("./controllers/userController.js");
 const listingController = require("./controllers/listingController.js");
+// const userListingsController = require("./controllers/userListingsController.js");
 
 // CONFIGURATION
 const app = express();
@@ -13,6 +14,7 @@ app.use(express.json());
 require("dotenv").config();
 app.use("/users", userController);
 app.use("/listings", listingController);
+// app.use("/users/:id/listings", userListingsController);
 
 // ROUTES
 app.get("/", (req, res) => {

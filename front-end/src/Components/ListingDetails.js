@@ -23,11 +23,14 @@ function ListingDetails() {
 
   return (
     <div>
-        <h6>{listing.category}</h6>
       <div className="listing-details">
+        <h6>{listing.category}</h6>
         <img className="image" src={listing.image} alt={listing.title} />
         <h6>{listing.title}</h6>
         <p>{listing.description}</p>
+        {/* <button>Message User
+          <a href="mailto:{user.email}">{user.email}</a>
+        </button> */}
       </div>
       <div>
         <Link to={`/listings`}>

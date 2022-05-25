@@ -1,6 +1,6 @@
 const express = require("express");
 const listings = express.Router();
-const { getAllListings, getListing, newListing } = require("../queries/listings.js");
+const { getAllListings, getListing } = require("../queries/listings.js");
 
 // get all listings
 listings.get("/", async (req, res) => {
@@ -34,5 +34,28 @@ listings.post("/", async (req, res) => {
   const listing = await newListing(req.body);
   res.status(200).json(listing);
 });
+
+// UPDATE
+listings.put("/:id", async (req, res) => {
+  const { id } = req.params;
+  const updatedListing = await updateListing(id, req.body);
+  if (updatedListing.id) {
+    res.status(200).json(updatedListing);
+  } else {
+    res.status(404).json("Listing not found");
+  }
+});
+
+// DELETE
+listings.delete("/:id", async (req, res) => {
+  const { id } = req.params;
+  const deletedListing = await deleteListing(id, req.body);
+  if (deletedListing.id) {
+    res.status(200).json(deletedListing);
+  } else {
+    res.status(404).json("Listing not deleted");
+  }
+});
+
 
 module.exports = listings;
