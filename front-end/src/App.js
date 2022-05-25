@@ -8,6 +8,7 @@ import New from "./Pages/New";
 import Edit from "./Pages/Edit";
 import SaveYourWorld from "./Pages/SaveYourWorld";
 import CreateAccount from "./Pages/CreateAccount";
+import About from "./Components/About";
 import Footer from "./Components/Footer";
 import UserProfile from "./Pages/UserProfile";
 import Login from "./Pages/Login";
@@ -18,6 +19,7 @@ function App() {
   const [username, setUserName] = useState("");
 
   return (
+<<<<<<< HEAD
     <div className="App">
       <Router>
         <Navbar />
@@ -35,6 +37,28 @@ function App() {
                 <Route path="/login" element={<Login setUserName={setUserName} userName = {username}/>} />
              </Routes>
           </main>
+=======
+    <>
+      <Router>     
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home userName={username} />} />
+          <Route path="/search" element={<SearchResults />} />
+          <Route path="/saveyourworld" element={<SaveYourWorld />} />
+          <Route path="/listings" element={<Index />} />
+          <Route path="/listings/:id" element={<Show />} />
+          <Route path="/listings/new" element={<New />} />
+          <Route path="/listings/:id/edit" element={<Edit />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/createaccount" element={<CreateAccount />} />
+          <Route
+            path="/userprofile"
+            element={<UserProfile userName={username} />}
+          />
+          <Route path="/login" element={<Login userName={username} />} />
+        </Routes>
+        <Footer />
+>>>>>>> 68956a6e4e1441441d8de8203bf83d43fde2a078
       </Router>
       <Footer />
     </div>
