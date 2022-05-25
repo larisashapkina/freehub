@@ -9,6 +9,7 @@ import New from "./Pages/New";
 import Edit from "./Pages/Edit";
 import SaveYourWorld from "./Pages/SaveYourWorld";
 import CreateAccount from "./Pages/CreateAccount";
+import About from "./Components/About";
 import Footer from "./Components/Footer";
 import UserProfile from "./Pages/UserProfile";
 import Login from "./Pages/Login";
@@ -20,7 +21,7 @@ function App() {
 
   return (
     <>
-      <Router>
+      <Router>     
         <Navbar />
         <Routes>
           <Route path="/" element={<Home userName={username} />} />
@@ -30,6 +31,7 @@ function App() {
           <Route path="/listings/:id" element={<Show />} />
           <Route path="/listings/new" element={<New />} />
           <Route path="/listings/:id/edit" element={<Edit />} />
+          <Route path="/about" element={<About />} />
           <Route path="/createaccount" element={<CreateAccount />} />
           <Route
             path="/userprofile"
