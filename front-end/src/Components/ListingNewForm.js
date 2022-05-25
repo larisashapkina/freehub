@@ -3,7 +3,6 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 //import {Link} from "react-router-dom";
 
-
 function ListingNew(){
     const[listing, setListing] = useState({
         category:"",
@@ -73,8 +72,7 @@ function ListingNew(){
                 <input type="submit" />
             </form>
         </div>
-    )
-   
+    )  
 }
 
 export default ListingNew;

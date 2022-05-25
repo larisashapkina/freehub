@@ -1,8 +1,6 @@
 import FeaturedListing from "../Components/FeaturedListing";
 
-
 function Home() {
-
     //const greeting = localStorage.getItem("userId");
     const userName = localStorage.getItem("username");
 

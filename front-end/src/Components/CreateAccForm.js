@@ -80,9 +80,6 @@ function CreateAccForm({setUserName}){
             <div>
                 <input type="Submit" value="Create Account"/>     
             </div>
-            {/* <button className="createaccount">
-           <Link to="/createaccount">Create Account</Link>
-         </button> */}
         </form>
         </div>
     )

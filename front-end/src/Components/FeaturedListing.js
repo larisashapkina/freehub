@@ -20,7 +20,6 @@ function FeaturedListing() {
       })
   }, []);
 
-
   let featured = featuredlisting.filter((list)=>list.id<5).map((listing)=>{
     let { title, description, image, id } = listing;
     return  <div className="feature-details">

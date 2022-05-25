@@ -1,8 +1,7 @@
 import { Link} from "react-router-dom";
 // import { useState, useEffect } from "react";
 // import axios  from "axios";
-
-const API = process.env.REACT_APP_API_URL;
+//const API = process.env.REACT_APP_API_URL;
 
 function Listing ({listing }) {
     return (
@@ -14,12 +13,8 @@ function Listing ({listing }) {
                 <img className="image" src={listing.image} alt={listing.title}/>
                 <br/>
             </Link>
-            {listing.user_id}
-            
+            {listing.user_id}   
         </div>
-        
-       
     )
 }
-
 export default Listing;

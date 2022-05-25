@@ -1,7 +1,6 @@
 import CreateAccForm from "../Components/CreateAccForm";
 
-function Account({setUserName}){
-    
+function Account({setUserName}){    
     return (
         <div>
             Please create account

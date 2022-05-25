@@ -29,15 +29,13 @@ function UserProfile(){
         })
     }       
 
-
     const mappedListings = userlistings.map((listing)=>{
         return <div className="userlistings">
                 <div>{listing.title}</div>
                 <img className="image" src={listing.image} alt={listing.title}/>
                 <button onClick ={handleDelete}>Delete</button>
                 <button>Edit</button>
-            </div>   
-                
+            </div>               
     })
     return(
         <div>
@@ -49,4 +47,5 @@ function UserProfile(){
         </div>
     )
 }
+
 export default UserProfile;
