@@ -21,7 +21,8 @@ function LoginForm ({setUserName,setText}){
         setUserName(username.username);
         axios.post(`${process.env.REACT_APP_API_URL}/users/login`, {username: username, password:password})
           .then((res)=>{
-            localStorage.setItem("userId",`${res.data.id}`)
+            localStorage.setItem("userId",`${res.data.id}`);
+            localStorage.setItem("username",`${res.data.username}`);
             setText("Logout");
             navigate(`/userprofile/${res.data.id}`);
           }).catch((err)=>{

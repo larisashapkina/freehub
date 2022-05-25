@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 function Navbar({text, setText}){
 
-  const userId = localStorage.getItem("userId");
+  //const userId = localStorage.getItem("userId");
   const logout = ()=>{
     localStorage.clear()
     setText("Login")
@@ -25,15 +25,15 @@ function Navbar({text, setText}){
            <Link to="/listings">Listings</Link>
        </button>
 
-       {userId?(<button onClick={logout}
+       {localStorage.getItem("userId")?(<button onClick={logout}
           className="login">
            <Link to="/"> {text} </Link>
          </button>):(<button className="login">
            <Link to="/login"> {text} </Link>
          </button>)}
 
-        {userId?( <button className="userprofile">
-           <Link to={`/userprofile/${userId}`}>My profile </Link>
+        {localStorage.getItem("userId")?( <button className="userprofile">
+           <Link to={`/userprofile/${localStorage.getItem("userId")}`}>My profile </Link>
          </button>):("")
         }   
     </div>

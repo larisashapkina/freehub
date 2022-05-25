@@ -5,21 +5,12 @@ import axios  from "axios";
 
 const API = process.env.REACT_APP_API_URL;
 
-
 function ListingDetails(){
+
   const [listing, setListing] = useState({});
   const[user, setUser] = useState({});
   let { id } = useParams();
-
-  useEffect(()=>{
-    axios.get(API + "/users/" + id)
-      .then((res)=>{
-        console.log(res.data);
-        setUser(res.data);
-      }).catch((err)=>{
-        console.log(err);
-      })
-  }, [id, API]) ;
+  const userId = localStorage.getItem("userId");
 
   useEffect(()=>{
     axios.get(API + "/listings/" + id)
@@ -29,6 +20,17 @@ function ListingDetails(){
         console.log(err);
       })
   }, [id, API]) ;
+
+
+  useEffect(()=>{
+    axios.get(API + "/users/" + listing.user_id)
+      .then((res)=>{
+        console.log(res.data);
+        setUser(res.data);
+      }).catch((err)=>{
+        console.log(err);
+      })
+  }, [listing.user_id, API]) ;
 
   return(
     <div>
@@ -40,9 +42,8 @@ function ListingDetails(){
          <Link to={`/listings`}>
             <button>Back</button>
          </Link>
-         <br/>
            <br/>
-                <a href={"mailto:"+ user.email}>Contact about this item</a> 
+               {userId?(<a href={"mailto:"+ user.email}>Contact about this item</a>):"" }
        </div>
     </div>
   )

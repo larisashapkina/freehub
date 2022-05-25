@@ -6,10 +6,11 @@ import { useParams } from "react-router-dom";
 
 const API = process.env.REACT_APP_API_URL;
 
-function UserProfile({userName}){
+function UserProfile(){
     const [userlistings, setUserlistings] = useState([]);
     let { id } = useParams();
     let navigate = useNavigate();
+    const userName = localStorage.getItem("username");
 
     useEffect(() => {
         axios.get(`${API}/users/${id}/listings`)

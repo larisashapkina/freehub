@@ -16,7 +16,7 @@ import Login from "./Pages/Login";
 function App() {
 	
 	const [username, setUserName] = useState("");
-	const [text,setText] = useState("Login");
+	const [text, setText] = useState(localStorage.getItem("userId")?"Logout":"Login");
  
 	return (
 		<div className="App">
