@@ -18,10 +18,10 @@ const getListing = async (id) => {
 	}
 };
 
-const getUsersListings = async (user_id) => {
+const getAllListingsByUser = async (user_id) => {
 	try {
-		const UsersListings = await db.any("SELECT * FROM listings WHERE user_id=$1", user_id);
-		return UsersListings;
+		const AllListingsByUser = await db.any("SELECT * FROM listings WHERE user_id=$1", user_id);
+		return AllListingsByUser;
 	} catch (err) {
 		return err;
 	}
@@ -61,9 +61,9 @@ const updateListing = async (id, listing) => {
 };
 
 module.exports = {
-	getUsersListings,
 	getAllListings,
 	getListing,
+	getAllListingsByUser,
 	newListing,
 	deleteListing,
 	updateListing,

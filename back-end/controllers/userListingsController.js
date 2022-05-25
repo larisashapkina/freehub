@@ -1,31 +1,31 @@
 const express = require("express");
-const listings = express.Router();
+const userListings = express.Router({ mergeParams: true });
 const {
-  getAllListings,
-  // getUsersListings,
-  newListing,
+  getAllListingsByUser,
+  // newListing,
+  // deleteListing,
+  // updateListing,
 } = require("../queries/listings.js");
 
-// get all listings
-listings.get("/", async (req, res) => {
-  // const { userId } = req.params;
+// get all listings by user
+userListings.get("/", async (req, res) => {
+  const { userId } = req.params;
+
   try {
-    const allListings = await getAllListings();
-    res.json(allListings);
+    const AllListingsByUser = await getAllListingsByUser(userId);
+    res.json(AllListingsByUser);
   } catch (err) {
     res.json(err);
   }
-  if (allListings[0]) {
-    res.status(200).json(allListings);
-  } else {
-    res.status(500).json({ error: "server error" });
-  }
+  // if (AllListingsByUser[0]) {
+  //   res.status(200).json(AllListingsByUser);
+  // } else {
+  //   res.status(500).json({ error: "server error" });
+  // }
 });
 
-// SHOW
-
-// one listing by listing's id
-// listings.get("/:id", async (req, res) => {
+// SHOW one listing by user's id
+// userListings.get("/:id", async (req, res) => {
 //   const { id } = req.params;
 //   const listing = await getListing(id);
 //   if (listing) {
@@ -44,16 +44,26 @@ listings.get("/", async (req, res) => {
 //   } else {
 //     res.status(404).json("Listing not found");
 //   }
+// // CREATE
+// userListings.post("/:userId/listings", async (req, res) => {
+//   const listing = await newListing(req.body);
+//   res.status(200).json(listing);
 // });
 
-// CREATE
-listings.post("/", async (req, res) => {
-  const listing = await newListing(req.body);
-  res.status(200).json(listing);
-});
+// // UPDATE
+// userListings.put("/:userId/listings/:id", async (req, res) => {
+//   const { id } = req.params;
+//   const updatedListing = await updateListing(id, req.body);
+//   if (updatedListing.id) {
+//     res.status(200).json(updatedListing);
+//   } else {
+//     res.status(404).json("Listing not found");
+//   }
+// });
 
 // // DELETE
 // listings.delete("/:id", async (req, res) => {
+// userListings.delete("/:userId/listings/:id", async (req, res) => {
 //   const { id } = req.params;
 
 //   const deletedListing = await deleteListing(id);
@@ -64,4 +74,4 @@ listings.post("/", async (req, res) => {
 //   }
 // });
 
-module.exports = listings;
+module.exports = userListings;

@@ -39,11 +39,11 @@ function UserProfile(){
     })
     return(
         <div>
-          Hello {userName}!
+          Hey {userName}!
           {mappedListings}
            <button className="New-listing">
                 <Link to="/listings/new">New Listing</Link>
-             </button>
+           </button>
         </div>
     )
 }

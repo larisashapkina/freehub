@@ -1,0 +1,46 @@
+#listingCard {
+  background-color: whitesmoke;
+  border: 1px solid darkgrey;
+  border-radius: 5px;
+  padding: 10px;
+  width: 350px;
+  text-align: left;
+  background-blend-mode: color-burn;
+}
+
+
+/* h6 {
+    text-align: left;
+} */
+
+#listingCard .image {
+    border: 1px solid #ddd;
+    box-shadow: -4px -4px 10px -5px;
+    border-radius: 4px;
+    height: auto;
+    float: right;
+    padding: 10px;
+    object-fit: cover;
+  }
+  
+  #background-image {
+    height: 500px;
+    background: url("https://www.concertmagnet.com/wp-content/uploads/2022/05/Screenshot-2022-05-21-at-1.07.59-PM-300x77.png");
+    background-size: cover;
+}
+
+  p {
+      border: 1px solid #ddd;
+      font-size: small;
+      text-align: left;
+      padding: 0 10px;
+      width: 40%;
+  }
+
+  h5 {
+      border: 1px solid #ddd;
+      text-align: center;
+      width: 40%;
+      margin: 40px 0 10px;
+  }
+

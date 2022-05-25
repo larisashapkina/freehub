@@ -3,13 +3,14 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Error from "./loginError";
+import './LoginForm.css';
 
 function LoginForm ({setUserName,setText}){
     const [username,setUserNamee]=useState("");
     const [password,setPassword]=useState("");
     const [error, setError] = useState("");
 
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
     const handleTextChange = (event) => {
         setUserNamee({ ...username, [event.target.id]: event.target.value });
@@ -59,8 +60,9 @@ function LoginForm ({setUserName,setText}){
                 </button>
                 </form>
             </div>
-        )
+          )
         }
+        
 export default LoginForm;
 
 

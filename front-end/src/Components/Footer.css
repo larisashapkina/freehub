@@ -1,9 +1,25 @@
 .footer{
+    height: 44px;
+    background-color: green;
+    opacity: .7;
+    width: 100%;
     position: fixed;
     padding: 10px 10px 0px 10px;
     bottom: 0;
-    width: 100%;
-    /* Height of the footer*/ 
-    height: 40px;
-    background: grey;
+    
 }
+
+.footer-buttons {
+    justify-items: left;
+    color: white;
+    padding: 10px;
+}
+
+/* a {
+    background-color: white;
+    padding: 0 10px;
+    text-decoration: none;
+    color: rgb(31, 53, 53);
+    font-size: 15px bold;
+} */
+
