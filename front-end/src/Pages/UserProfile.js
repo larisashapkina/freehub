@@ -20,10 +20,10 @@ function UserProfile(){
         });
         }, [id, API]);
 
-   const handleDelete = ()  =>{
-        axios.delete(`${API} + /users/${id}/listings/${id}`)
+   const handleDelete = (listingId)  =>{
+        axios.delete(`${API}/listings/${listingId}`)
         .then((response)=>{
-            navigate(`/users/${id}/listings`)
+            navigate(`/userprofile/${id}`)
         }).catch((err)=>{
             console.log(err);
         })
@@ -33,17 +33,18 @@ function UserProfile(){
         return <div className="userlistings">
                 <div>{listing.title}</div>
                 <img className="image" src={listing.image} alt={listing.title}/>
-                <button onClick ={handleDelete}>Delete</button>
+                <button onClick ={()=>handleDelete(listing.id)}>Delete</button>
                 <button>Edit</button>
             </div>               
     })
     return(
         <div>
-          Hey {userName}!
-          {mappedListings}
-           <button className="New-listing">
+             <button className="New-listing">
                 <Link to="/listings/new">New Listing</Link>
            </button>
+          Hey {userName}!
+          {mappedListings}
+          
         </div>
     )
 }

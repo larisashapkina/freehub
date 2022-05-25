@@ -20,7 +20,8 @@ function ListingNew(){
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.post(`${process.env.REACT_APP_API_URL}/listings`, listing)
+        let userId = localStorage.getItem("userId");
+        axios.post(`${process.env.REACT_APP_API_URL}/listings`, {...listing,userId})
           .then((res)=>{
             navigate("/listings");
           }).catch((err)=>{

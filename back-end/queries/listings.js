@@ -31,7 +31,7 @@ const newListing = async (listing) => {
 	try {
 		const newListing = await db.one(
 			"INSERT INTO listings (category, title, description, image, user_id) VALUES($1, $2, $3, $4, $5) RETURNING *",
-			[listing.category, listing.title, listing.description, listing.image, listing.user_id]
+			[listing.category, listing.title, listing.description, listing.image, listing.userId]
 		);
 		return newListing;
 	} catch (error) {
@@ -49,14 +49,17 @@ const deleteListing = async (id) => {
 };
 
 const updateListing = async (id, listing) => {
+	// console.log("updateListing", id, listing)
 	try {
 		const updatedListing = await db.one(
 			"UPDATE listings SET category=$1, title=$2, description=$3, image=$4, user_id=$5 WHERE id=$6 RETURNING *",
-			[listing.category, listing.title, listing.description, listing.image, listing.user_id, id]
+			[listing.category, listing.title, listing.description, listing.image, listing.userId, id]
+			
 		);
+		// console.log(updatedListing);
 		return updatedListing;
 	} catch (error) {
-		return error;
+		console.log(error) ;
 	}
 };
 
