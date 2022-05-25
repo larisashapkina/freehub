@@ -7,7 +7,7 @@ function Home() {
        
   return (
     <main>
-    <h6>Welcome to FreeHub {userName}!</h6>
+    <h6>Welcome {userName}!</h6>
             <FeaturedListing/> 
       <div id="main-content">
         <div id="featured-listings">

@@ -35,11 +35,12 @@ function App() {
 						<Route path="/createaccount" element={<CreateAccount setUserName={setUserName}/>} />
 						<Route path="/userprofile/:id" element={<UserProfile userName ={username}/>} />
 						<Route path="/login" element={<Login setUserName={setUserName} userName = {username} setText={setText}/>} />
+            <Route path="/aboutus" element={<About />} />
              {/* <Route path="/search" element={<SearchResults />} /> */}
 					</Routes>
 				</main>
+			  <Footer />
 			</Router>
-			<Footer />
 		</div>
 
  
@@ -73,7 +74,6 @@ function App() {
     //       <Route path="/listings/:id" element={<Show />} />
     //       <Route path="/listings/new" element={<New />} />
     //       <Route path="/listings/:id/edit" element={<Edit />} />
-    //       <Route path="/about" element={<About />} />
     //       <Route path="/createaccount" element={<CreateAccount />} />
     //       <Route
     //         path="/userprofile"

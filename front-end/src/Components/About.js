@@ -6,10 +6,10 @@ class About extends Component {
   render() {
     return (
       <div className="about">
-        {/* <h3 id="descriptionHeader"></h3> */}
+        <h3 id="descriptionHeader">The FreeHub Team</h3>
         <Card />
       </div>
-    )
+    );
   }
 }
 
