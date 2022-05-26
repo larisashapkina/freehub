@@ -27,6 +27,7 @@ function App() {
 				<main>
 					<Routes>
 						<Route path="/" element={<Home userName = {username}/>} />
+            {/* <Route path="/search" element={<SearchResults />} /> */}
             <Route path="/saveyourworld" element={<SaveYourWorld />} />
 						<Route path="/listings" element={<Index />} />
 						<Route path="/listings/:id" element={<Show />} />
@@ -42,49 +43,6 @@ function App() {
 			  <Footer />
 			</Router>
 		</div>
-
- 
-
- 
-    // <div className="App">
-    //   <Router>
-    //     <Navbar />
-    //       <main>
-    //         <Routes>
-    //             <Route path="/" element={<Home userName = {username}/>} />
-    //             {/* <Route path="/search" element={<SearchResults />} /> */}
-    //             <Route path="/saveyourworld" element={<SaveYourWorld />} />
-    //             <Route path="/listings" element={<Index />} />
-    //             <Route path="/listings/:id" element={<Show />} />
-    //             <Route path="/listings/new" element={<New />} />
-    //             <Route path="/listings/:id/edit" element={<Edit />} />
-    //             <Route path="/createaccount" element={<CreateAccount setUserName={setUserName}/>} />
-    //             <Route path="/userprofile/:id" element={<UserProfile userName ={username}/>} />
-    //             <Route path="/login" element={<Login setUserName={setUserName} userName = {username}/>} />
-    //          </Routes>
-    //       </main>
-    // <>
-    //   <Router>     
-    //     <Navbar />
-    //     <Routes>
-    //       <Route path="/" element={<Home userName={username} />} />
-    //       <Route path="/search" element={<SearchResults />} />
-    //       <Route path="/saveyourworld" element={<SaveYourWorld />} />
-    //       <Route path="/listings" element={<Index />} />
-    //       <Route path="/listings/:id" element={<Show />} />
-    //       <Route path="/listings/new" element={<New />} />
-    //       <Route path="/listings/:id/edit" element={<Edit />} />
-    //       <Route path="/createaccount" element={<CreateAccount />} />
-    //       <Route
-    //         path="/userprofile"
-    //         element={<UserProfile userName={username} />}
-    //       />
-    //       <Route path="/login" element={<Login userName={username} />} />
-    //     </Routes>
-    //     <Footer />
-    //   </Router>
-    //   <Footer />
-    // </div>
 	);
 }
 
