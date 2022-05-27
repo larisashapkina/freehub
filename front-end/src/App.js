@@ -35,11 +35,12 @@ function App() {
 						<Route path="/createaccount" element={<CreateAccount setUserName={setUserName}/>} />
 						<Route path="/userprofile/:id" element={<UserProfile userName ={username}/>} />
 						<Route path="/login" element={<Login setUserName={setUserName} userName = {username} setText={setText}/>} />
+            <Route path="/about" element={<About />} />
              {/* <Route path="/search" element={<SearchResults />} /> */}
 					</Routes>
 				</main>
-			</Router>
 			<Footer />
+			</Router>
 		</div>
 
  

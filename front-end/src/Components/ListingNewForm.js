@@ -52,6 +52,7 @@ function ListingNew(){
                 onChange={handleTextChange}
                 value={listing.title}
                 placeholder="Title"
+                maxlength="50"
                 />
                 <label htmlFor="description">Description:</label>
                 <input

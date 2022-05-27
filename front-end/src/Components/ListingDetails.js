@@ -34,11 +34,11 @@ function ListingDetails() {
   }, [listing.user_id, API]) ;
 
   return(
-    <div>
+    <div className="listing-card">
       <h2>Category: {listing.category}</h2>
-      <div>Title: {listing.title}</div>
+      <h4>{listing.title}</h4>
       <div>Description: {listing.description}</div>
-       <img className="image" src={listing.image} alt={listing.title}/>
+       <img className="listing-card-image" src={listing.image} alt={listing.title}/>
        <div>
          <Link to={`/listings`}>
             <button>Back</button>

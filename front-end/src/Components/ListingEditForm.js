@@ -57,6 +57,7 @@ function ListingEditForm(){
                   onChange={handleTextChange}
                   value={userListing.title}
                   placeholder="Title"
+                  maxlength="50"
                   />
                   <label htmlFor="description">Description:</label>
                   <input

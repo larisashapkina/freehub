@@ -1,38 +1,56 @@
 
 /* Navbar -----------------------------------*/
-#navbar {
+.navbar {
     background-color: teal;
     opacity: .5;
     display: grid;
-    grid-template-columns: 15% 25% 35% 25%;
+    grid-template-columns: 20% 20% 20% 20% 20%;
     justify-items: center;
     align-items: center;
-    padding: 15px;
+    padding: 25px;
 }
 
-#climate {
+/* #climate {
     height: 40px;
-}
+} */
 
-#nav-buttons {
+/* #nav-buttons {
     background-color: white;
     border-radius: 5px;
     padding: 4px;
     border: solid white;
     color: white;
     
+} */
+
+.navbar button {
+    /* width: 130px; */
+    padding: 10px;
+    font-size: larger;
+    font-weight: bold;
+    border-radius: 7px;
+    background: #FFEBCD
+
 }
 
-#navbar #logo a {
+#nav-logo {
+    width: 150px;
+}
+
+.navbar button:hover { background: white}
+
+
+
+.navbar .logo a {
     justify-items: left;
     font-size: 40px;
     font-weight: 540;
-    border: 3px solid white;
     border-radius: 5px;
-    background-color: green;
-    padding: 8px;
     font-family: Arial, Helvetica, sans-serif;
-    color: white;
+}
+
+.logo {
+    background-color: rgb(142, 192, 169);
 }
 
 #featured-listings {

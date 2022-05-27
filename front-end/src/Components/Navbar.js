@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import "./Navbar.css";
+import logo from "../assets/logo.png"
 
 function Navbar({text, setText}){
 
@@ -14,7 +15,7 @@ function Navbar({text, setText}){
     <div className="navbar">
 
        <button className="logo">
-            <Link to="/">Logo</Link>
+            <Link to="/"><img id='nav-logo' src={logo} /></Link>
        </button> 
 
        <button className="planet">
