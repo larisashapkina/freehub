@@ -2,8 +2,13 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import "./Navbar.css";
 
-function Navbar({ text, setText }) {
-  const [searchInput, setSearchInput, handleSearchInput] = useState("");
+function Navbar({
+  text,
+  setText,
+  searchInput,
+  handleSearchInput,
+  handleSearch
+}) {
   //const userId = localStorage.getItem("userId");
   const logout = () => {
     localStorage.clear();
@@ -26,7 +31,11 @@ function Navbar({ text, setText }) {
             value={searchInput}
           />
           &nbsp;&nbsp;
-          <button id="search-button" type="submit">
+          <button
+            id="search-button"
+            type="submit"
+            onClick={(e) => handleSearch(e)}
+          >
             Search
           </button>
         </form>
@@ -49,9 +58,9 @@ function Navbar({ text, setText }) {
         ) : (
           ""
         )}
-      );
+        );
       </div>
-      {/* <div id="climate"><climate-clock /></div> */}
+      <div id="climate">{/* <climate-clock /> */}</div>
     </div>
   );
 }

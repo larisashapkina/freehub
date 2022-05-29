@@ -44,7 +44,7 @@ function ListingEditForm() {
         <label htmlFor="name">
           Category:
           <select id="listing-category" name="category">
-            <option>--Select a category--</option>
+            <option>--Select Category--</option>
             <option>Furniture</option>
             <option>Electronics</option>
             <option>Clothing</option>
