@@ -26,6 +26,8 @@ function Navbar({text, setText}){
            <Link to="/listings">Listings</Link>
        </button>
 
+       
+
        {localStorage.getItem("userId")?(<button onClick={logout}
           className="login">
            <Link to="/"> {text} </Link>
@@ -33,10 +35,14 @@ function Navbar({text, setText}){
            <Link to="/login"> {text} </Link>
          </button>)}
 
-        {localStorage.getItem("userId")?( <button className="userprofile">
+         <button className="userprofile">
+           <Link to={`/userprofile/${localStorage.getItem("userId")}`}>My profile </Link>
+         </button>
+
+        {/* {localStorage.getItem("userId")?( <button className="userprofile">
            <Link to={`/userprofile/${localStorage.getItem("userId")}`}>My profile </Link>
          </button>):("")
-        }   
+        }    */}
     </div>
     )
 // }

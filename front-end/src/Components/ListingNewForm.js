@@ -44,8 +44,8 @@ function ListingNew(){
                     <option>Beauty</option>
                     <option>Art</option>
                 </select>
-                </label>
-                <label htmlFor="title">Title:</label>
+                </label><br />
+                <label htmlFor="title">Title:</label><br />
                 <input
                 id="title"
                 type="text"
@@ -53,16 +53,16 @@ function ListingNew(){
                 value={listing.title}
                 placeholder="Title"
                 maxlength="50"
-                />
-                <label htmlFor="description">Description:</label>
+                /><br />
+                <label htmlFor="description">Description:</label><br />
                 <input
                 id="description"
                 type="text"
                 value={listing.description}
                 placeholder="Description"
                 onChange={handleTextChange}
-                />
-                <label htmlFor="image">Image:</label>
+                /><br />
+                <label htmlFor="image">Image:</label><br />
                 <input
                 id="image"
                 value={listing.image}
@@ -70,7 +70,7 @@ function ListingNew(){
                 onChange={handleTextChange}
                 placeholder="Image"
                 />
-                <br />
+                <br /><br />
                 <input type="submit" />
             </form>
         </div>
