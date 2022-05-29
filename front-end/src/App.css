@@ -1,4 +1,4 @@
-input[type=text] {
+/* input[type=text] {
     width: 50%;
     padding: 6px 20px;
 }
@@ -6,7 +6,7 @@ input[type=text] {
 input[type=submit] {
     width: 56.5%;
     background-color: #45a049;
-}
+} */
 
 #descriptionHeader {
     padding-top: 10px;

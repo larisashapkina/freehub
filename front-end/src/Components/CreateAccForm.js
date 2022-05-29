@@ -33,9 +33,9 @@ function CreateAccForm({ setUserName }) {
   };
 
   return (
-    <div>
+    <div className="createaccform">
       <form onSubmit={handleSubmit}>
-        <label htmlFor="firstname">First Name:</label>
+        <label htmlFor="firstname">First Name:</label><br />
         <input
           required
           id="firstname"
@@ -45,7 +45,7 @@ function CreateAccForm({ setUserName }) {
           placeholder="first name"
         />
         <br />
-        <label htmlFor="lastname">Last Name:</label>
+        <label htmlFor="lastname">Last Name:</label><br />
         <input
           required
           id="lastname"
@@ -55,7 +55,7 @@ function CreateAccForm({ setUserName }) {
           placeholder="last name"
         />
         <br />
-        <label htmlFor="username">User Name:</label>
+        <label htmlFor="username">User Name:</label><br />
         <input
           required
           id="username"
@@ -65,7 +65,7 @@ function CreateAccForm({ setUserName }) {
           placeholder="user name"
         />
         <br />
-        <label htmlFor="email">E-mail:</label>
+        <label htmlFor="email">E-mail:</label><br />
         <input
           required
           id="email"
@@ -75,7 +75,7 @@ function CreateAccForm({ setUserName }) {
           placeholder="email"
         />
         <br />
-        <label htmlFor="password">Password:</label>
+        <label htmlFor="password">Password:</label><br />
         <input
           required
           id="password"

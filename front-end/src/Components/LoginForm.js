@@ -32,10 +32,10 @@ function LoginForm ({setUserName,setText}){
          };
 
         return (
-            <div>
+            <div className="loginform">
                 <Error error={error}/>
                 <form onSubmit={handleSubmit}>
-                <label htmlFor="username">User Name:</label>
+                <label htmlFor="username">User Name:</label><br />
                 <input
                 id="username"
                 value={username.username}
@@ -44,7 +44,7 @@ function LoginForm ({setUserName,setText}){
                 placeholder="username name"
                 />
                 <br />
-                <label htmlFor="password">Password:</label>
+                <label htmlFor="password">Password:</label><br />
                 <input
                 id="password"
                 value={password.password}
