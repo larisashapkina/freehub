@@ -7,12 +7,19 @@ function Navbar({
   setText,
   searchInput,
   handleSearchInput,
-  handleSearch
+  handleSearch,
+  setSearchInput,
+  setSelectedCategory,
 }) {
   //const userId = localStorage.getItem("userId");
   const logout = () => {
     localStorage.clear();
     setText("Login");
+  };
+
+  const resetChooseCategory = () => {
+    setSearchInput("");
+    setSelectedCategory("");
   };
 
   return (
@@ -42,7 +49,10 @@ function Navbar({
       </div>
       <div id="nav-buttons">
         <Link to="/saveyourworld">Save Your World</Link>&nbsp;&nbsp;
-        <Link to="/listings">Listings</Link>&nbsp;&nbsp;
+        <Link to="/listings" onClick={resetChooseCategory}>
+          Listings
+        </Link>
+        &nbsp;&nbsp;
         {localStorage.getItem("userId") ? (
           <Link onClick={logout} to="/">
             {" "}

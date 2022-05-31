@@ -1,52 +1,56 @@
-import { Link, useNavigate } from 'react-router-dom';
-import Listing from '../Components/Listing';
+import { Link, useNavigate } from "react-router-dom";
+import Listing from "../Components/Listing";
 import axios from "axios";
-import { useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 const API = process.env.REACT_APP_API_URL;
 
-function UserProfile(){
-    const [userlistings, setUserlistings] = useState([]);
-    let { id } = useParams();
-    let navigate = useNavigate();
-    const userName = localStorage.getItem("username");
+function UserProfile() {
+  const [userlistings, setUserlistings] = useState([]);
+  let { id } = useParams();
+  let navigate = useNavigate();
+  const userName = localStorage.getItem("username");
 
-    useEffect(() => {
-        axios.get(`${API}/users/${id}/listings`)
-        .then((response) => {
-            console.log(response.data);
-            setUserlistings(response.data);
-        });
-        }, [id, API]);
+  useEffect(() => {
+    axios.get(`${API}/users/${id}/listings`).then((response) => {
+      console.log(response.data);
+      setUserlistings(response.data);
+    });
+  }, [id, API]);
 
-   const handleDelete = (listingId)  =>{
-        axios.delete(`${API}/listings/${listingId}`)
-        .then((response)=>{
-            navigate(`/userprofile/${id}`)
-        }).catch((err)=>{
-            console.log(err);
-        })
-    }       
+  const handleDelete = (listingId) => {
+    axios
+      .delete(`${API}/listings/${listingId}`)
+      .then((response) => {
+        navigate(`/userprofile/${id}`);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
-    const mappedListings = userlistings.map((listing)=>{
-        return <div className="userlistings">
-                <div>{listing.title}</div>
-                <img className="image" src={listing.image} alt={listing.title}/>
-                <button onClick ={()=>handleDelete(listing.id)}>Delete</button>
-                <button>Edit</button>
-            </div>               
-    })
-    return(
-        <div>
-             <button className="New-listing">
-                <Link to="/listings/new">New Listing</Link>
-           </button>
-          Hey {userName}!
-          {mappedListings}
-          
-        </div>
-    )
+  const mappedListings = userlistings.map((listing) => {
+    return (
+      <div>
+        <div>{listing.title}</div>
+        <img className="image" src={listing.image} alt={listing.title} />
+        <button onClick={() => handleDelete(listing.id)}>Delete</button>
+        <button>Edit</button>
+      </div>
+    );
+  });
+  return (
+    <div>
+      Hey {userName}!
+      <button className="New-listing">
+        <Link to="/listings/new">New Listing</Link>
+      </button>
+      <div id="mapped-listings-container">
+        <div id="mapped-listings">{mappedListings}</div>
+      </div>
+    </div>
+  );
 }
 
 export default UserProfile;

@@ -1,21 +1,23 @@
 import "./Home.css";
-import FeaturedListing from "../Components/FeaturedListing.js"
+import FeaturedListing from "../Components/FeaturedListing.js";
 
 function Home() {
-    //const greeting = localStorage.getItem("userId");
-    const userName = localStorage.getItem("username");
-       
+  //const greeting = localStorage.getItem("userId");
+  const userName = localStorage.getItem("username");
+
   return (
-    <main>
-    <h6>Welcome {userName}!</h6>
-            <FeaturedListing/> 
+    <div>
+      <h3>Welcome {userName}!</h3>
+
       <div id="main-content">
-        <div id="featured-listings">
-          Rethink. Reduce. Reuse.
+        <div className="featured-listings">
+          <FeaturedListing />
         </div>
-          </div>
-        <div id="home-image"></div>
-    </main>
+        <div className="rethink">Rethink. Reduce. Reuse.</div>
+      </div>
+
+      <div id="home-image"></div>
+    </div>
   );
 }
 

@@ -44,7 +44,7 @@ function App() {
   };
 
   useEffect(() => {
-    if (selectedCategory === "All") {
+    if (selectedCategory === "All" || !selectedCategory) {
       setFilterResults(listings);
     } else {
       const results = listings.filter(
@@ -52,7 +52,7 @@ function App() {
       );
       setFilterResults(results);
     }
-  }, [selectedCategory, listings]);
+  }, [selectedCategory]);
 
   function searchListings(searchInput, listings) {
     if (searchInput.length > 0) {
@@ -68,9 +68,9 @@ function App() {
 
   const handleSearch = (e) => {
     e.preventDefault();
+    setSelectedCategory("");
     const listingsSearch = searchListings(searchInput, listings);
     setListingsSearch(listingsSearch);
-    setSearchInput("");
   };
 
   return (
@@ -80,8 +80,10 @@ function App() {
           text={text}
           setText={setText}
           searchInput={searchInput}
-          handleSearchInput={handleSearchInput}
+          setSearchInput={setSearchInput}
           handleSearch={handleSearch}
+          handleSearchInput={handleSearchInput}
+          setSelectedCategory={setSelectedCategory}
         />
         <main>
           <Routes>
@@ -92,23 +94,12 @@ function App() {
               path="/listings"
               element={
                 <Index
-                  filterResults={filterResults}
+                  listSearch={searchInput ? listingsSearch : filterResults}
                   selectedCategory={selectedCategory}
-                  listingsSearch={listingsSearch}
-                  searchInput={searchInput}
                   handleNavigation={handleNavigation}
                 />
               }
             />
-            {/* <Route path="/listings/all" element={<Index />} />
-            <Route path="/listings/furniture" element={<Index />} />
-            <Route path="/listings/electronics" element={<Index />} />
-            <Route path="/listings/clothing" element={<Index />} />
-            <Route path="/listings/home" element={<Index />} />
-            <Route path="/listings/motors" element={<Index />} />
-            <Route path="/listings/toys" element={<Index />} />
-            <Route path="/listings/beauty" element={<Index />} />
-            <Route path="/listings/art" element={<Index />} /> */}
             <Route path="/listings/:id" element={<Show />} />
             <Route path="/listings/new" element={<New />} />
             <Route path="/listings/:id/edit" element={<Edit />} />

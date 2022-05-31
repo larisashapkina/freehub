@@ -8,9 +8,7 @@ import "./Listings.css";
 const API = process.env.REACT_APP_API_URL;
 
 function Listings({
-  listingsSearch,
-  searchInput,
-  filterResults,
+  listSearch,
   handleNavigation,
 }) {
   // const [listings, setListings] = useState([]);
@@ -38,13 +36,9 @@ function Listings({
         <button onClick={() => handleNavigation("Art")}>Art</button>
       </div>
       <div className="listings-container">
-        {!searchInput
-          ? filterResults.map((listing) => {
-              return <Listing key={listing.id} listing={listing} />;
-            })
-          : listingsSearch.map((listing) => {
-              return <Listing key={listing.id} listing={listing} />;
-            })}
+        {listSearch.map((listing) => {
+          return <Listing key={listing.id} listing={listing} />;
+        })}
       </div>
     </main>
   );

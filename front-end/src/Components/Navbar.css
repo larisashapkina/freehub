@@ -10,13 +10,14 @@
     padding: 15px;
 }
 
-#climate {
-    height: 40px;
-}
+/* #climate {
+    height: 25px;
+} */
 
 #nav-buttons {
     background-color: white;
     border-radius: 5px;
+    /* height: 18px; */
     padding: 4px;
     border: solid white;
     color: white;
@@ -53,12 +54,17 @@ a:hover {
 #search-input {
     padding: 5 0 0 0;
     width: 200px;
-    height: 26px;
+    height: 16px;
+    border: solid white;
+    border-radius: 5px;
 }
 
 #search-button {
     width: 60px;
     height: 30px;
+    padding: 4px;
+    border: solid white;
+    border-radius: 5px;
 }
 
 /* #home-image {
