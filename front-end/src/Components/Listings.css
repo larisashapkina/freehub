@@ -39,10 +39,12 @@
 } */
 
 
-/* #categories-menu {
-border: 1px solid teal;
+.categories-menu button {
+margin-left: 2px;
+padding: 15px;
+height: 45px;
 grid-area: catmenu;
-} */
+}
 
 /* #home-listings-container {
   border: 2px solid rebeccapurple;

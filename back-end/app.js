@@ -18,7 +18,7 @@ app.use("/listings", listingController);
 
 // ROUTES
 app.get("/", (req, res) => {
-	res.send("Welcome to FreeHub");
+	res.send("<h1>Welcome to FreeHub</h1>");
 });
 
 // 404 PAGE

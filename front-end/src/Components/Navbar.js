@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./Navbar.css";
 import logo from "../assets/logo.png"
 
-function Navbar({text, setText}){
+function Navbar({text, setText}){   
 
   //const userId = localStorage.getItem("userId");
   const logout = ()=>{

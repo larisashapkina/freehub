@@ -1,9 +1,9 @@
 import ListingDetails from "../Components/ListingDetails"
 
-function Show(){
+function Show({userlistings}){
     return (
         <div>
-            < ListingDetails />
+            < ListingDetails userlistings = {userlistings} />
         </div>
     )
 }
