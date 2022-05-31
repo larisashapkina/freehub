@@ -3,6 +3,7 @@ import Listing from "../Components/Listing";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import "./UserProfile.css";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -32,7 +33,7 @@ function UserProfile() {
 
   const mappedListings = userlistings.map((listing) => {
     return (
-      <div>
+      <div id="listingCard">
         <div>{listing.title}</div>
         <img className="image" src={listing.image} alt={listing.title} />
         <button onClick={() => handleDelete(listing.id)}>Delete</button>
@@ -46,8 +47,8 @@ function UserProfile() {
       <button className="New-listing">
         <Link to="/listings/new">New Listing</Link>
       </button>
-      <div id="mapped-listings-container">
-        <div id="mapped-listings">{mappedListings}</div>
+      <div className="listings-container">
+        {mappedListings}
       </div>
     </div>
   );

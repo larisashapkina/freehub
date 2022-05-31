@@ -23,22 +23,24 @@ function FeaturedListing() {
   }, []);
 
   let featured = featuredlisting
-    .filter((list) => list.id < 4)
+    .filter((list) => list.id < 5)
     .map((listing) => {
       let { title, image, id } = listing;
       return (
-        <div className="featured">
-          <div>
-            {" "}
-            <Link to={`/listings/${id}`}>
-              <img className="image" src={image} alt={listing.title} />
-            </Link>
-          </div>
-          <h5>{title}</h5>
+        <div>
+          {" "}
+          <Link to={`/listings/${id}`}>
+            <img className="image" src={image} alt={listing.title} />
+            <h5>{title}</h5>
+          </Link>
         </div>
       );
     });
-  return <div>{featured}</div>;
+  return (
+    <div id="listings-container">
+      <div className="listingCard"> {featured}</div>
+    </div>
+  );
 }
 
 export default FeaturedListing;

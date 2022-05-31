@@ -7,13 +7,13 @@ function Home() {
 
   return (
     <div>
-      <h3>Welcome {userName}!</h3>
-
       <div id="main-content">
-        <div className="featured-listings">
+        <h2>Welcome {userName}!</h2>
+        <div className="rethink">Rethink. Reduce. Reuse.</div>
+        <div className=".listings-container">
           <FeaturedListing />
         </div>
-        <div className="rethink">Rethink. Reduce. Reuse.</div>
+        <div></div>
       </div>
 
       <div id="home-image"></div>

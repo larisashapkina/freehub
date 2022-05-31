@@ -1,23 +1,39 @@
 #home-image {
-  border: 1px solid teal;
-  height: 650px;
+  height: 900px;
   background: url("https://www.concertmagnet.com/wp-content/uploads/2022/05/Screenshot-2022-05-21-at-1.10.42-PM.png");
   background-size: cover;
 }
 
-#main-content {
-  height: 50px;
-  background-color: rgb(182, 236, 236);
-  border: 1px solid red;
+#main-content h2 {
+  color: white;
+  align-items: center;
 }
 
-#featured-listings a.active {
+#main-content .listings-container {
+  border: 10px solid red;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#main-content .rethink {
+  color: white;
+  align-items: center;
+  font-size: 50px;
+  align-items: left;
+}
+
+#main-content {
+  height: 150px;
+  background-color: rgb(182, 236, 236);
+  border: 1px solid teal;
+}
+
+/* #featured-listings a.active {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   color: rgb(214, 199, 199);
   border: 1px solid teal;
   height: 50px;
-}
+} */
 
 /* #featured-listings {
   gap: 2px;
@@ -25,3 +41,16 @@
   border: 1px solid teal;
   grid-area: featured;
 } */
+
+/* <div>
+      <h3>Welcome {userName}!</h3>
+
+      <div id="main-content">
+        <div className="featured-listings">
+          <FeaturedListing />
+        </div>
+        <div className="rethink">Rethink. Reduce. Reuse.</div>
+      </div>
+
+      <div id="home-image"></div>
+    </div>  */

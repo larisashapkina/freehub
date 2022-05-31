@@ -48,7 +48,7 @@ function Navbar({
         </form>
       </div>
       <div id="nav-buttons">
-        <Link to="/saveyourworld">Save Your World</Link>&nbsp;&nbsp;
+        <Link to="/saveyourworld">Be a Hero</Link>&nbsp;&nbsp;
         <Link to="/listings" onClick={resetChooseCategory}>
           Listings
         </Link>
