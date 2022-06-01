@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
+import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import Home from "./Pages/Home";
@@ -16,20 +15,11 @@ import Login from "./Pages/Login";
 // import SearchResults from "./Components/SearchResults";
 import "./App.css";
 
-const API = process.env.REACT_APP_API_URL;
 
 function App() {
-	const [userlistings, setUserlistings] = useState([]);
+	
 	const [username, setUserName] = useState("");
 	const [text, setText] = useState(localStorage.getItem("userId")?"Logout":"Login");
- 
-  useEffect(() => {
-    axios.get(`${API}/users/${localStorage.getItem("userId")}/listings`)
-    .then((response) => {
-        console.log(response.data);
-        setUserlistings(response.data);
-    });
-    }, [ API]);
 
 
 	return (
@@ -41,11 +31,11 @@ function App() {
 						<Route path="/" element={<Home userName = {username}/>} />
             <Route path="/saveyourworld" element={<SaveYourWorld />} />
 						<Route path="/listings" element={<Index />} />
-						<Route path="/listings/:id" element={<Show userlistings={userlistings} />} />
+						<Route path="/listings/:id" element={<Show />} />
 						<Route path="/listings/new" element={<New />} />
 						<Route path="/listings/:id/edit" element={<Edit />} />
 						<Route path="/createaccount" element={<CreateAccount setUserName={setUserName}/>} />
-						<Route path="/userprofile/:id" element={<UserProfile userName ={username} userlistings={userlistings} />} />
+						<Route path="/userprofile/:id" element={<UserProfile userName ={username} />} />
 						<Route path="/login" element={<Login setUserName={setUserName} userName = {username} setText={setText}/>} />
             <Route path="/about" element={<About />} />
              {/* <Route path="/search" element={<SearchResults />} /> */}

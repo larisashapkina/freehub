@@ -1,23 +1,24 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
+import { useState, useEffect } from "react";
 import Listing from '../Components/Listing';
 import axios from "axios";
 
 
 const API = process.env.REACT_APP_API_URL;
 
-function UserProfile({userlistings, id}){
-    // const [userlistings, setUserlistings] = useState([]);
-    // let { id } = useParams();
+function UserProfile(){
+    const [userlistings, setUserlistings] = useState([]);
+    let { id } = useParams();
     let navigate = useNavigate();
     const userName = localStorage.getItem("username");
 
-    // useEffect(() => {
-    //     axios.get(`${API}/users/${id}/listings`)
-    //     .then((response) => {
-    //         console.log(response.data);
-    //         setUserlistings(response.data);
-    //     });
-    //     }, [id, API]);
+    useEffect(() => {
+        axios.get(`${API}/users/${id}/listings`)
+        .then((response) => {
+            console.log(response.data);
+            setUserlistings(response.data);
+        });
+        }, [id, API]);
 
    const handleDelete = (listingId)  =>{
         axios.delete(`${API}/listings/${listingId}`)
