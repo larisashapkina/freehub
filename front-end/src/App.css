@@ -31,8 +31,8 @@ input[type="submit"] {
   background-color: whitesmoke;
   border: 1px solid darkgrey;
   border-radius: 5px;
-  padding: 10px;
-  width: 350px;
+  padding: 5px;
+  width: 250px;
   text-align: left;
   background-blend-mode: color-burn;
 }
@@ -49,4 +49,47 @@ input[type="submit"] {
   float: right;
   padding: 10px;
   object-fit: cover;
+}
+
+.about {
+  background-color: skyblue;
+  height: 500%;
+}
+
+#teamheader {
+  color: solid white;
+}
+
+#teamContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.card {
+  box-shadow: -6px -6px 10px -5px;
+  width: 300px;
+  text-align: center;
+  background-color: ghostwhite;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.cardPic {
+  height: 400px;
+}
+
+.selfie {
+  height: 150px;
+  width: 150px;
+}
+
+.socialLinks img {
+  height: 50px;
+}
+
+.linksContainer {
+  border: solid red;
+  padding-left: 270px;
+  width: 20px;
+  display: inline-block;
 }

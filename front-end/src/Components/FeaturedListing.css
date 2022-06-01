@@ -1,4 +1,4 @@
-.listings-container {
+#listings-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   background-color: rgb(236, 247, 247);
@@ -9,7 +9,7 @@
   justify-items: center;
 }
 
-#listingCard {
+.listingCard {
   background-color: whitesmoke;
   border: 1px solid darkgrey;
   border-radius: 5px;
