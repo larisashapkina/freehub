@@ -23,7 +23,10 @@ function UserProfile(){
    const handleDelete = (listingId)  =>{
         axios.delete(`${API}/listings/${listingId}`)
         .then((response)=>{
-            navigate(`/userprofile/${id}`)
+            const newUserlisting = userlistings.filter((listing)=>
+            listing.id!==listingId)
+            setUserlistings(newUserlisting);
+            // navigate(`/userprofile/${id}`)
         }).catch((err)=>{
             console.log(err);
         })
@@ -34,7 +37,9 @@ function UserProfile(){
                 <div>{listing.title}</div>
                 <img className="image" src={listing.image} alt={listing.title}/>
                 <button onClick ={()=>handleDelete(listing.id)}>Delete</button>
-                <button>Edit</button>
+                <Link to ={`/listings/${listing.id}/edit`}><button>Edit</button>
+                </Link>
+                
             </div>               
     })
     return(

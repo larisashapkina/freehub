@@ -34,12 +34,13 @@ function App() {
 						<Route path="/listings/:id/edit" element={<Edit />} />
 						<Route path="/createaccount" element={<CreateAccount setUserName={setUserName}/>} />
 						<Route path="/userprofile/:id" element={<UserProfile userName ={username}/>} />
+            <Route path="/aboutus" element={<About />} />
 						<Route path="/login" element={<Login setUserName={setUserName} userName = {username} setText={setText}/>} />
              {/* <Route path="/search" element={<SearchResults />} /> */}
 					</Routes>
 				</main>
+        <Footer />
 			</Router>
-			<Footer />
 		</div>
 
  

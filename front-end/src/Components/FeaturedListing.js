@@ -22,7 +22,7 @@ function FeaturedListing() {
       });
   }, []);
 
-  let featured = featuredlisting.filter((list)=>list.id<5).map((listing)=>{
+  let featured = featuredlisting.filter((list)=>list.id<4).map((listing)=>{
     let { title, image, id } = listing;
     return  <div className="feature-details">
             <div> <Link to={`/listings/${id}`}><img className="image" src={image} alt={listing.title}/></Link>
@@ -32,19 +32,8 @@ function FeaturedListing() {
  </div>
   })
   return (
-    <div className="featured">
-      {featuredlisting.map((listing) => (
-        <div className="featured-details">
-          <div>
-            {" "}
-            <Link to={`/listings/${listing.id}`}>
-              <img className="image" src={listing.image} alt={listing.title} />
-            </Link>
-          </div>
-          <h5>{listing.title}</h5>
-          <p>{listing.description}</p>
-        </div>
-      ))}
+    <div>
+     {featured}
     </div>
   );
 }

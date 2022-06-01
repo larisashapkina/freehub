@@ -6,7 +6,7 @@ import { useNavigate, useParams } from "react-router-dom";
 const API = process.env.REACT_APP_API_URL;
 
 function ListingEditForm(){
-      const[userListing, setUserListings] = useState({
+      const[userListing, setUserListing] = useState({
           category:"",
           title:"",
           description:"",
@@ -15,20 +15,21 @@ function ListingEditForm(){
       let { id } = useParams();
       const navigate = useNavigate();
       const handleTextChange = (event) => {
-          setUserListings({ ...userListing, [event.target.id]: event.target.value });
+          setUserListing({ ...userListing, [event.target.id]: event.target.value });
       };
       useEffect(() => {
-        axios.get(`${API}/users/${id}/listings`)
+        axios.get(`${API}/listings/${id}`)
         .then((response) => {
-            console.log(response.data);
-            setUserListings(response.data);
+            // console.log(response.data);
+            setUserListing(response.data);
         });
         }, [id, API]);
+
       const handleSubmit = (event) => {
           event.preventDefault();
-          axios.put(`${process.env.REACT_APP_API_URL}/users/${id}/listings/${id}`, userListing)
+          axios.put(`${API}/listings/${id}`, userListing)
             .then((res)=>{
-              navigate("/listings");
+              navigate(`/userprofile/${localStorage.getItem("userId")}`);
             }).catch((err)=>{
               console.log(err);
             })

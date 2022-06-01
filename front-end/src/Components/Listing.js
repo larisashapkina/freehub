@@ -23,7 +23,7 @@ let  { id } =useParams();
   return (
     <div id="listingCard">
       <div id="listing-category">
-        {/* <Link to={`/listings/${listing.category}`}><h6>{listing.category}</h6></Link> */}
+        <Link to={`/listings/${listing.category}`}><h6>{listing.category}</h6></Link>
       </div>
       <Link to={`/listings/${listing.id}`}>
         <img className="image" src={listing.image} alt={listing.title} />

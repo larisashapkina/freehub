@@ -13,29 +13,36 @@ function Navbar({text, setText}){
     return(
     <div className="navbar">
 
-       <button className="logo">
+       {/* <button className="logo"> */}
             <Link to="/">Logo</Link>
-       </button> 
+       {/* </button>  */}
 
-       <button className="planet">
+       {/* <button className="planet"> */}
            <Link to="/savetheearth">Save the Planet</Link>
-       </button>
+       {/* </button> */}
 
-       <button className="listings">
+       {/* <button className="listings"> */}
            <Link to="/listings">Listings</Link>
-       </button>
+       {/* </button> */}
 
-       {localStorage.getItem("userId")?(<button onClick={logout}
+       {localStorage.getItem("userId")?( <Link onClick={logout}to="/"> {text} </Link>):
+       (<Link to="/login"> {text} </Link>)}
+
+        {localStorage.getItem("userId")?(
+        <Link to={`/userprofile/${localStorage.getItem("userId")}`}>My profile </Link>):("")
+        } 
+
+       {/* {localStorage.getItem("userId")?(<button onClick={logout}
           className="login">
            <Link to="/"> {text} </Link>
          </button>):(<button className="login">
            <Link to="/login"> {text} </Link>
-         </button>)}
+         </button>)} */}
 
-        {localStorage.getItem("userId")?( <button className="userprofile">
+        {/* {localStorage.getItem("userId")?( <button className="userprofile">
            <Link to={`/userprofile/${localStorage.getItem("userId")}`}>My profile </Link>
          </button>):("")
-        }   
+        }    */}
     </div>
     )
 // }
