@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Footer.css";
 import { Link } from "react-router-dom";
 
@@ -6,9 +7,9 @@ function Footer() {
     <div className="footer">
       <div className="footer-buttons">
         <button>Contact Us</button>
-        <button className="aboutus">
+        <button>
           <Link to="/aboutus">About Us</Link>
-          </button>
+        </button>
       </div>
     </div>
   );

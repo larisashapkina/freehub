@@ -85,12 +85,12 @@ function CreateAccForm({ setUserName }) {
           placeholder="password"
         />
         <br />
-            <div>
-                <input type="Submit" value="Create Account"/>     
-            </div>
-        </form>
+        <div>
+          <input type="Submit" value="Create Account" />
         </div>
-    )
+      </form>
+    </div>
+  );
 }
 
 export default CreateAccForm;

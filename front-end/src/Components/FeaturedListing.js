@@ -22,20 +22,21 @@ function FeaturedListing() {
       });
   }, []);
 
-  let featured = featuredlisting.filter((list)=>list.id<4).map((listing)=>{
-    let { title, image, id } = listing;
-    return  <div className="feature-details">
-            <div> <Link to={`/listings/${id}`}><img className="image" src={image} alt={listing.title}/></Link>
-            </div>
-            <div>{title}</div>
-            {/* <div>{description}</div> */}
- </div>
-  })
-  return (
-    <div>
-     {featured}
-    </div>
-  );
+  let featured = featuredlisting
+    .filter((list) => list.id < 5)
+    .map((listing) => {
+      let { title, image, id } = listing;
+      return (
+        <div>
+          {" "}
+          <Link to={`/listings/${id}`}>
+            <img className="image" src={image} alt={listing.title} />
+            <h5>{title}</h5>
+          </Link>
+        </div>
+      );
+    });
+  return <div id="featured-listings-container">{featured}</div>;
 }
 
 export default FeaturedListing;

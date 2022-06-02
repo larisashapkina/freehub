@@ -1,10 +1,13 @@
 import Listings from "../Components/Listings";
 
-function Index() {
+function Index({ listSearch, handleNavigation }) {
   return (
     <main>
       <div>
-        <Listings />
+        <Listings
+          listSearch={listSearch}
+          handleNavigation={handleNavigation}
+        />
       </div>
     </main>
   );

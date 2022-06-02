@@ -1,55 +1,45 @@
 import Listing from "./Listing";
-import axios from "axios";
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+// import axios from "axios";
+// import { useState, useEffect } from "react";
+// import { useParams } from "react-router-dom";
 import "./Listings.css";
-
+// import FeaturedListing from "./FeaturedListing";
 
 const API = process.env.REACT_APP_API_URL;
 
-function Listings() {
+function Listings({
+  listSearch,
+  handleNavigation,
+}) {
+  // const [listings, setListings] = useState([]);
 
-  const [listings, setListings] = useState([]);
-  const [seletedCategory, setSeletedCategory] = useState("");
-  let { id } = useParams();
+  // let { id } = useParams();
 
-  useEffect(() => {
-      axios.get(`${API}/listings`)
-      .then((response) => {
-          //console.log(response.data);
-          setListings(response.data);
-      });
-      }, [id, API]);
-      
-  const filterResults = listings.filter((data) => {
-    if (seletedCategory === "") return true;
-    return data.category === seletedCategory;
-  });
-  
+  // const filterResults = listings.filter((data) => {
+  //   if (selectedCategory === "All") return true;
+  //   return data.category === selectedCategory;
+  // });
+
   return (
     <main>
-        <div className="categories-menu">
-          <button onClick={() => setSeletedCategory("")}>All</button>
-          <button onClick={() => setSeletedCategory("Furniture")}>
-            Furniture
-          </button>
-          <button onClick={() => setSeletedCategory("Electronics")}>
-            Electronics
-          </button>
-          <button onClick={() => setSeletedCategory("Clothing")}>
-            Clothing
-          </button>
-          <button onClick={() => setSeletedCategory("Home")}>Home </button>
-          <button onClick={() => setSeletedCategory("Motors")}>Motors</button>
-          <button onClick={() => setSeletedCategory("Toys")}>Toys </button>
-          <button onClick={() => setSeletedCategory("Beauty")}>Beauty </button>
-          <button onClick={() => setSeletedCategory("Art")}>Art</button>
-        </div>
-        <div className="listings-container">
-          {filterResults.map((listing) => {
-            return <Listing key={listing.id} listing={listing} />;
-          })}
-        </div>
+      <div className="categories-menu">
+        <button onClick={() => handleNavigation("All")}>All</button>
+        <button onClick={() => handleNavigation("Furniture")}>Furniture</button>
+        <button onClick={() => handleNavigation("Electronics")}>
+          Electronics
+        </button>
+        <button onClick={() => handleNavigation("Clothing")}>Clothing</button>
+        <button onClick={() => handleNavigation("Home")}>Home </button>
+        <button onClick={() => handleNavigation("Motors")}>Motors</button>
+        <button onClick={() => handleNavigation("Toys")}>Toys </button>
+        <button onClick={() => handleNavigation("Beauty")}>Beauty </button>
+        <button onClick={() => handleNavigation("Art")}>Art</button>
+      </div>
+      <div className="listings-container">
+        {listSearch.map((listing) => {
+          return <Listing key={listing.id} listing={listing} />;
+        })}
+      </div>
     </main>
   );
 }

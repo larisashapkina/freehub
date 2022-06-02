@@ -1,0 +1,39 @@
+/* #mapped-listings {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+ display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  border: 3px solid teal;
+  border-style: double;
+  padding: 25px;
+  background-size: cover;
+  height: 300px;
+  row-gap: 20px;
+  justify-items: center; 
+} */
+
+/* #mappedlistings {
+  background-color: whitesmoke;
+  border: 1px solid red;
+  border-radius: 5px;
+  padding: 10px;
+  width: 350px;
+  text-align: left;
+  background-blend-mode: color-burn;
+} */
+
+/* #userlistingCard .image {
+  border: 1px solid #ddd;
+  box-shadow: -4px -4px 10px -5px;
+  border-radius: 4px;
+  height: auto;
+  float: right;
+  padding: 10px;
+  object-fit: cover;
+} */
+/* 
+#background-image {
+  background: url("https://www.concertmagnet.com/wp-content/uploads/2022/05/Screenshot-2022-05-21-at-1.07.59-PM-300x77.png");
+  background-size: cover;
+} */

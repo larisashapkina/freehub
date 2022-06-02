@@ -1,21 +1,19 @@
 import "./Home.css";
-import FeaturedListing from "../Components/FeaturedListing.js"
+import FeaturedListing from "../Components/FeaturedListing.js";
 
 function Home() {
-    //const greeting = localStorage.getItem("userId");
-    const userName = localStorage.getItem("username");
-       
+  //const greeting = localStorage.getItem("userId");
+  const userName = localStorage.getItem("username");
+
   return (
-    <main>
-    <h6>Welcome to FreeHub {userName}!</h6>
-            <FeaturedListing/> 
+    <div>
       <div id="main-content">
-        <div id="featured-listings">
-          Rethink. Reduce. Reuse.
-        </div>
-          </div>
-        <div id="home-image"></div>
-    </main>
+        <h2>Welcome {userName}!</h2>
+        <h1>Rethink. Reduce. Reuse.</h1>
+        <FeaturedListing />
+      </div>
+      <div id="home-image"></div>
+    </div>
   );
 }
 
