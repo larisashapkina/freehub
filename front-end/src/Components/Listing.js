@@ -6,19 +6,19 @@ import "./Listing.css";
 const API = process.env.REACT_APP_API_URL;
 
 function Listing({ listing }) {
-  const [user,setUser]=useState({
-})
-let  { id } =useParams();
+//   const [user,setUser]=useState({
+// })
+// let  { id } =useParams();
 
-    useEffect(()=>{
-        axios.get(API + "/users/")
-          .then((res)=>{
-            console.log(res.data);
-            setUser(res.data);
-          }).catch((err)=>{
-            console.log(err);
-          })
-      }, [id, API]) ;
+    // useEffect(()=>{
+    //     axios.get(API + "/users/")
+    //       .then((res)=>{
+    //         console.log(res.data);
+    //         setUser(res.data);
+    //       }).catch((err)=>{
+    //         console.log(err);
+    //       })
+    //   }, [id, API]) ;
 
   return (
     <div id="listingCard">
