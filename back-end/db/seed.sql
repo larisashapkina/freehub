@@ -1,10 +1,10 @@
 \c users_dev;
 
 INSERT INTO users (firstname, lastname, username, password, email) VALUES
-('Xiaoming', 'Yang', 'xmyang', '12345', 'xiaomingyang@pursuit.org'),
-('Sara', 'D''Arce', 'SaraDArce', '12345', 'saradarce@pursuit.org'),
-('Larisa', 'Shapkina', 'lshapkina', '12345', 'larisashapking@pursuit.org'),
-('Stephanie', 'Reyes', 'sreyes1089', '12345', 'stephaniereyes@pursuit.org'),
+('Xiaoming', 'Yang', 'xmyang', '*****', 'xiaomingyang@pursuit.org'),
+('Sara', 'D''Arce', 'SaraDArce', '*****', 'saradarce@pursuit.org'),
+('Larisa', 'Shapkina', 'lshapkina', '*****', 'larisashapking@pursuit.org'),
+('Stephanie', 'Reyes', 'sreyes1089', '*****', 'stephaniereyes@pursuit.org'),
 ('John', 'Reez', 'maninasuit', '324234', 'jreez6742@nbc.com'),
 ('Sameen', 'Hsaw', 'xmyang', '9385733', 'sammhsaw@cbs.com'),
 ('Lionel', 'Fusco', 'goodcop', '937423462', 'lionfusco@cbs.com'),

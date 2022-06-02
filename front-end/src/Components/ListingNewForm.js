@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 //import {Link} from "react-router-dom";
 import './ListingNewForm.css';
 
@@ -13,6 +13,7 @@ function ListingNew(){
     })
 
     const navigate = useNavigate();
+    // let { id } = useParams();
 
     const handleTextChange = (event) => {
         setListing({ ...listing, [event.target.id]: event.target.value });
@@ -23,7 +24,8 @@ function ListingNew(){
         let userId = localStorage.getItem("userId");
         axios.post(`${process.env.REACT_APP_API_URL}/listings`, {...listing,userId})
           .then((res)=>{
-            navigate("/listings");
+              navigate (`/userprofile/${userId}`);
+             //navigate("/listings");
           }).catch((err)=>{
             console.log(err);
           })
