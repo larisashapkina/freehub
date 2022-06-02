@@ -36,11 +36,7 @@ function FeaturedListing() {
         </div>
       );
     });
-  return (
-    <div id="listings-container">
-      <div className="listingCard"> {featured}</div>
-    </div>
-  );
+  return <div id="featured-listings-container">{featured}</div>;
 }
 
 export default FeaturedListing;

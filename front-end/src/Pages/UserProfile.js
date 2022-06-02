@@ -24,19 +24,31 @@ function UserProfile() {
     axios
       .delete(`${API}/listings/${listingId}`)
       .then((response) => {
-        navigate(`/userprofile/${id}`);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
+        const newUserlisting = userlistings.filter((listing)=>
+            listing.id!==listingId)
+            setUserlistings(newUserlisting);
+            // navigate(`/userprofile/${id}`)
+        }).catch((err)=>{
+            console.log(err);
+        })
+    }
+
 
   const mappedListings = userlistings.map((listing) => {
     return (
-      <div id="listingCard">
-        <div>{listing.title}</div>
+      <div className="userlistings">
         <img className="image" src={listing.image} alt={listing.title} />
-        <button onClick={() => handleDelete(listing.id)}>Delete</button>
+        {listing.title}
+        <button
+          onClick={() =>
+            window.confirm(
+              "Are you sure you want to delete listing? You won't be able undo this action!"
+            ) 
+          }
+        >
+          Delete
+        </button>
+        {/* <button onClick={() => handleDelete(listing.id)}>Delete</button> */}
         <button>Edit</button>
       </div>
     );
@@ -47,9 +59,7 @@ function UserProfile() {
       <button className="New-listing">
         <Link to="/listings/new">New Listing</Link>
       </button>
-      <div className="listings-container">
-        {mappedListings}
-      </div>
+      <div className="listings-container">{mappedListings}</div>
     </div>
   );
 }

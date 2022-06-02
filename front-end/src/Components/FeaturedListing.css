@@ -1,17 +1,12 @@
-#listings-container {
+#featured-listings-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  background-color: rgb(236, 247, 247);
-  border: 3px solid teal;
-  border-style: double;
-  padding: 25px;
-  row-gap: 20px;
-  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1;
+  border: 3px solid red;
 }
 
-.listingCard {
-  background-color: whitesmoke;
-  border: 1px solid darkgrey;
+.featured-listings-card {
+  border: 1px solid red;
   border-radius: 5px;
   padding: 10px;
   width: 350px;
@@ -19,8 +14,7 @@
   background-blend-mode: color-burn;
 }
 
-
-#listingCard img {
+#featured-listings-card img {
   border: 1px solid #ddd;
   box-shadow: -4px -4px 10px -5px;
   border-radius: 4px;
@@ -28,11 +22,9 @@
   float: right;
   padding: 10px;
   object-fit: cover;
-}
+} 
 
-h1 {
-      text-align: left;
-  }
+
 
 /* .featured {
   display: grid;

@@ -5,14 +5,17 @@
 }
 
 #main-content {
-  height: 150px;
+  display: flex;
+  height: 200px;
   background-color: rgb(182, 236, 236);
   border: 1px solid teal;
 }
 
 #main-content h2 {
   color: white;
-  align-items: center;
+}
+#main-content h1 {
+  color: white;
 }
 
 #main-content .rethink {

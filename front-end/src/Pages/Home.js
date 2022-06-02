@@ -9,11 +9,9 @@ function Home() {
     <div>
       <div id="main-content">
         <h2>Welcome {userName}!</h2>
-          <div className="rethink">Rethink. Reduce. Reuse.</div>
-            <div><FeaturedListing /></div>
-        <div></div>
+        <h1>Rethink. Reduce. Reuse.</h1>
+        <FeaturedListing />
       </div>
-
       <div id="home-image"></div>
     </div>
   );
