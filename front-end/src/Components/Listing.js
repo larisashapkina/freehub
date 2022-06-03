@@ -25,12 +25,12 @@ function Listing({ listing }) {
     <div id="listingCard">
       <div id="listing-category">
         <Link to={`/listings/${listing.category}`}>
-          <h6>{listing.category}</h6>
+          <div>{listing.category}</div>
         </Link>
       </div>
       <Link to={`/listings/${listing.id}`}>
         <img className="image" src={listing.image} alt={listing.title} />
-        <h5>{listing.title}</h5>
+        <div className="list-title">{listing.title}</div>
         <p className="description">{listing.description}</p>
       </Link>
     </div>

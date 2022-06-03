@@ -8,8 +8,8 @@ function Home() {
   return (
     <div>
       <div id="main-content">
-        <h2>Welcome {userName}!</h2>
-        <h1>Rethink. Reduce. Reuse.</h1>
+        <h1 className="left">Welcome {userName}!</h1>
+        <h1 className="right">Rethink. Reduce. Reuse.</h1>
         <FeaturedListing />
       </div>
       <div id="home-image"></div>

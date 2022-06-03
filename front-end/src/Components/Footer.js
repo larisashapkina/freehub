@@ -5,10 +5,10 @@ function Footer() {
   return (
     <div className="footer">
       <div className="footer-buttons">
-        <button>Contact Us</button>
-        <button>
+        <a>Contact Us</a>
+        <a>
           <Link to="/aboutus">About Us</Link>
-        </button>
+        </a>
       </div>
     </div>
   );

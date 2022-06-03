@@ -5,8 +5,8 @@
 }
 
 #main-content {
-  display: flex;
-  height: 200px;
+  /* display: flex; */
+  /* height: 250px; */
   background-color: rgb(182, 236, 236);
   border: 1px solid teal;
 }
@@ -14,8 +14,17 @@
 #main-content h2 {
   color: white;
 }
+
 #main-content h1 {
   color: white;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
 }
 
 #main-content .rethink {
