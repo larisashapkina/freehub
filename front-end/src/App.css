@@ -57,9 +57,7 @@ input[type="submit"] {
   height: 500%;
 }
 
-#teamheader {
-  color: solid white;
-}
+
 
 #teamContainer {
   display: grid;
