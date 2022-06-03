@@ -1,0 +1,29 @@
+/* #main-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas: "sowi actions";
+} */
+
+#save-our-world-image {
+  height: 1150px;
+  background-position: bottom;
+  opacity: 70%;
+  background: url("https://www.concertmagnet.com/wp-content/uploads/2022/06/Screenshot-2022-06-02-at-5.42.22-PM-300x189.png")
+    no-repeat left;
+  background-size: cover;
+  
+}
+
+#actions-checklist {
+  background: url("https://www.concertmagnet.com/wp-content/uploads/2022/05/Screenshot-2022-05-23-at-12.55.35-AM-300x300.png")
+    no-repeat;
+  background-size: 680px;
+  background-position: center middle;
+  width: 100%;
+  height: 100%;
+  padding: 10px 10px 0px 10px;
+  width: 100%;
+  position: right;
+  bottom: 0;
+  grid-area: actions;
+}

@@ -1,0 +1,43 @@
+#featured-listings-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 100px;
+  gap: 40px;
+}
+
+.featured-listings-card {
+  background-color: white;
+  margin: 5px 15px 30px;
+  height: fit-content;
+  border-radius: 5px;
+  text-align: center;
+  min-height: 165px;
+  padding: 20px 5px 5px;
+
+}
+
+.featured-listings-card img {
+  background-color: white;
+  box-shadow: -4px -4px 10px -5px;
+  border-radius: 4px;
+}
+
+.featured-listings-card p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* number of lines to show */
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: .75em;
+}
+
+
+
+/* .featured {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  margin-top: 100px;
+  gap: 15px;
+} */

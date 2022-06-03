@@ -1,6 +1,5 @@
 import ListingDetails from "../Components/ListingDetails"
 
-
 function Show(){
     return (
         <div>
@@ -9,4 +8,4 @@ function Show(){
     )
 }
 
-export default Show 
+export default Show;

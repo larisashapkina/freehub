@@ -5,8 +5,10 @@ CREATE DATABASE users_dev;
 
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
-    firstName TEXT NOT NULL,
-    lastName TEXT NOT NULL,
+    firstname TEXT NOT NULL,
+    lastname TEXT NOT NULL,
+    username TEXT,
+    password TEXT,
     email TEXT NOT NULL
 );
 
@@ -14,6 +16,7 @@ DROP TABLE IF EXISTS listings;
 
 CREATE TABLE listings (
     id SERIAL PRIMARY KEY,
+    category TEXT,
     title TEXT NOT NULL,
     description TEXT,
     image TEXT,
