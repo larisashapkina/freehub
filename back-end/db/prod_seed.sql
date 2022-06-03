@@ -5,7 +5,7 @@ INSERT INTO users (firstname, lastname, username, password, email) VALUES
 ('Larisa', 'Shapkina', 'lshapkina', '12345', 'larisashapking@pursuit.org'),
 ('Stephanie', 'Reyes', 'sreyes1089', '12345', 'stephaniereyes@pursuit.org'),
 ('John', 'Reez', 'maninasuit', '324234', 'jreez6742@nbc.com'),
-('Sameen', 'Hsaw', 'xmyang', '9385733', 'sammhsaw@cbs.com'),
+('Sameen', 'Hsaw', 'agenthsaw', '9385733', 'sammhsaw@cbs.com'),
 ('Lionel', 'Fusco', 'goodcop', '937423462', 'lionfusco@cbs.com'),
 ('Tom', 'Anderson', 'tanderson', '342324582374', 'tanderson3721@gmail.com'),
 ('Harold', 'Finch', 'csgenius', '2343432', 'haroldf@gmail.com'),

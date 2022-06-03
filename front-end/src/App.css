@@ -8,7 +8,7 @@ input[type=submit] {
     background-color: #45a049;
 } */
 
-#descriptionHeader {
+/* #descriptionHeader {
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 80px;
@@ -29,12 +29,12 @@ input[type=submit] {
     border-radius: 8px;
     background-color: rgba(217, 226, 231, 0.915);
     padding-bottom: 50px;
-    /* margin: 25px auto; */
+    margin: 25px auto;
     margin: 10px auto;
-    /* background-image: url("https://pm1.narvii.com/6363/e314b04694df6a7e00bceb51b17c87ea0ae52a8a_hq.jpg"); */
-  }
+    background-image: url("https://pm1.narvii.com/6363/e314b04694df6a7e00bceb51b17c87ea0ae52a8a_hq.jpg");
+  } */
   
-  .card p {
+  /* .card p {
     width: auto;
     margin: 20px;
     margin-left: 60px;
@@ -44,10 +44,10 @@ input[type=submit] {
 
   .name {
     padding-top: 35px;
-    /* background-color: white;  */
-  }
+    background-color: white; 
+  } */
   
-  #teamContainer{
+  /* #teamContainer{
     display: grid;
     grid-template-rows: repeat(3, 1fr);
   }
@@ -74,7 +74,7 @@ input[type=submit] {
   .about {
       margin-top: 50px;
       margin-bottom: 150px;
-  }
+  } */
 
 
 
@@ -85,3 +85,100 @@ input[type=submit] {
     background-size: cover;
     opacity: 6;
 }  */
+
+input[type="text"] {
+  width: 50%;
+  padding: 6px 20px;
+}
+
+input[type="submit"] {
+  width: 56.5%;
+  background-color: #45a049;
+}
+
+/* #home-image {
+    border: 1px solid rgb(112, 233, 233);
+    height: 500px;
+    background: url("https://cdn.shopify.com/s/files/1/0365/7065/articles/Refuse_Reduce_Recycle_900x.jpg?v=1580323402") no-repeat center;
+    background-size: cover;
+    opacity: 6;
+}  */
+
+.listings-container {
+  background-color: rgb(236, 247, 247);
+  height: 1000px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 3px solid teal;
+  border-style: double;
+  padding: 25px;
+  row-gap: 20px;
+  justify-items: center;
+}
+
+#listingCard {
+  background-color: whitesmoke;
+  border: 1px solid darkgrey;
+  border-radius: 5px;
+  padding: 5px;
+  width: 250px;
+  text-align: left;
+  background-blend-mode: color-burn;
+}
+
+/* h6 {
+      text-align: left;
+  } */
+
+#listingCard img {
+  border: 3px solid #ddd;
+  box-shadow: -4px -4px 10px -5px;
+  border-radius: 4px;
+  height: auto;
+  float: right;
+  padding: 10px;
+  object-fit: cover;
+}
+
+.about {
+  background-color: skyblue;
+  height: 500%;
+}
+
+#teamheader {
+  color: solid white;
+}
+
+#teamContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.card {
+  box-shadow: -6px -6px 10px -5px;
+  width: 300px;
+  text-align: center;
+  background-color: ghostwhite;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.cardPic {
+  height: 400px;
+}
+
+.selfie {
+  height: 150px;
+  width: 150px;
+}
+
+.socialLinks img {
+  height: 50px;
+}
+
+.linksContainer {
+  border: solid red;
+  padding-left: 270px;
+  width: 20px;
+  display: inline-block;
+}
