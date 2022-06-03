@@ -27,7 +27,7 @@ function FeaturedListing() {
     .map((listing) => {
       let { title, image, id } = listing;
       return (
-        <div>
+        <div className="featured-listings-card">
           {" "}
           <Link to={`/listings/${id}`}>
             <img className="image" src={image} alt={listing.title} />

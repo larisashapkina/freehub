@@ -17,9 +17,10 @@ input[type="submit"] {
 }  */
 
 .listings-container {
+  background-color: rgb(236, 247, 247);
+  height: 1000px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  background-color: rgb(236, 247, 247);
   border: 3px solid teal;
   border-style: double;
   padding: 25px;
@@ -42,7 +43,7 @@ input[type="submit"] {
   } */
 
 #listingCard img {
-  border: 1px solid #ddd;
+  border: 3px solid #ddd;
   box-shadow: -4px -4px 10px -5px;
   border-radius: 4px;
   height: auto;

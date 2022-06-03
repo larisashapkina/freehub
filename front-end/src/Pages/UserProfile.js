@@ -24,64 +24,49 @@ function UserProfile() {
     axios
       .delete(`${API}/listings/${listingId}`)
       .then((response) => {
-        const newUserlisting = userlistings.filter((listing)=>
-            listing.id!==listingId)
-            setUserlistings(newUserlisting);
-            // navigate(`/userprofile/${id}`)
-        }).catch((err)=>{
-            console.log(err);
-        })
+        const newUserlisting = userlistings.filter(
+          (listing) => listing.id !== listingId
+        );
+        setUserlistings(newUserlisting);
+        // navigate(`/userprofile/${id}`)
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  const confirmDelete = (listing) => {
+    if (
+      window.confirm(
+        "Are you sure you want to delete listing? You won't be able undo this action!"
+      )
+    ) {
+      handleDelete(listing.id);
     }
+  };
 
-    const mappedListings = userlistings.map((listing)=>{
-        return <div className="userlistings">
-                <div>{listing.title}</div>
-                <img className="image" src={listing.image} alt={listing.title}/>
-                <button onClick ={()=>handleDelete(listing.id)}>Delete</button>
-                <Link to ={`/listings/${listing.id}/edit`}><button>Edit</button>
-                </Link>
-                
-            </div>               
-    })
-    return(
-        <div>
-             <button className="New-listing">
-                <Link to="/listings/new">New Listing</Link>
-           </button>
-          Hey {userName}!
-          {mappedListings}
-          
-        </div>
-    )
+  const mappedListings = userlistings.map((listing) => {
+    return (
+      <div id="listingCard">
+        <img className="image" src={listing.image} alt={listing.title} />
+        {listing.title}
+        <button onClick={() => confirmDelete(listing)}>Delete</button>
+        <button>Edit</button>
+      </div>
+    );
+  });
 
-  // const mappedListings = userlistings.map((listing) => {
-  //   return (
-  //     <div className="userlistings">
-  //       <img className="image" src={listing.image} alt={listing.title} />
-  //       {listing.title}
-  //       <button
-  //         onClick={() =>
-  //           window.confirm(
-  //             "Are you sure you want to delete listing? You won't be able undo this action!"
-  //           ) 
-  //         }
-  //       >
-  //         Delete
-  //       </button>
-  //       {/* <button onClick={() => handleDelete(listing.id)}>Delete</button> */}
-  //       <button>Edit</button>
-  //     </div>
-  //   );
-  // });
-  // return (
-  //   <div>
-  //     Hey {userName}!
-  //     <button className="New-listing">
-  //       <Link to="/listings/new">New Listing</Link>
-  //     </button>
-  //     <div className="listings-container">{mappedListings}</div>
-  //   </div>
-  // );
+  return (
+    <div>
+      Hey {userName}!
+      <div>
+        <button className="newListing">
+          <Link to="/listings/new">Create New Listing</Link>
+        </button>
+      </div>
+      <div className="listings-container">{mappedListings}</div>
+    </div>
+  );
 }
 
 export default UserProfile;

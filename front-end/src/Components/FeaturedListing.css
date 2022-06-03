@@ -2,26 +2,22 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1;
-  border: 3px solid red;
+  border: 3px solid purple;
 }
 
 .featured-listings-card {
+  background-color: white;
+  margin: 5px 15px 5px 15px;
+  height: fit-content;
   border: 1px solid red;
   border-radius: 5px;
-  padding: 10px;
-  width: 350px;
-  text-align: left;
-  background-blend-mode: color-burn;
+  text-align: center;
 }
 
-#featured-listings-card img {
-  border: 1px solid #ddd;
+.featured-listings-card img {
+  background-color: white;
   box-shadow: -4px -4px 10px -5px;
-  border-radius: 4px;
-  height: auto;
-  float: right;
-  padding: 10px;
-  object-fit: cover;
+  border-radius: 4px; 
 } 
 
 

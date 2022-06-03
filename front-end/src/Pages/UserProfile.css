@@ -1,19 +1,17 @@
 /* #mapped-listings {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
- display: grid;
-  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
   border: 3px solid teal;
   border-style: double;
   padding: 25px;
   background-size: cover;
-  height: 300px;
+  height: 400px;
   row-gap: 20px;
   justify-items: center; 
-} */
+}
 
-/* #mappedlistings {
+#mappedlistings {
   background-color: whitesmoke;
   border: 1px solid red;
   border-radius: 5px;
@@ -21,9 +19,9 @@
   width: 350px;
   text-align: left;
   background-blend-mode: color-burn;
-} */
+}
 
-/* #userlistingCard .image {
+#userlistingCard .image {
   border: 1px solid #ddd;
   box-shadow: -4px -4px 10px -5px;
   border-radius: 4px;
