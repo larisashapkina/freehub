@@ -1,14 +1,15 @@
 #featured-listings-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin-top: 100px;
+  margin-top: 85px;
   gap: 40px;
 }
 
 .featured-listings-card {
   background-color: white;
-  margin: 5px 15px 30px;
+  margin: 0px 55px 30px;
   height: fit-content;
+  max-width: 260px;
   border-radius: 5px;
   text-align: center;
   min-height: 165px;

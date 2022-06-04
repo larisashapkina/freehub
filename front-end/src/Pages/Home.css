@@ -10,10 +10,10 @@
   background-color: rgb(182, 236, 236);
   border: 1px solid teal;
 }
-
+/* 
 #main-content h2 {
   color: white;
-}
+} */
 
 #main-content h1 {
   color: white;
@@ -21,18 +21,19 @@
 
 .left {
   float: left;
+  /* padding-left: 20px;   */
 }
 
 .right {
   float: right;
 }
 
-#main-content .rethink {
+/* #main-content .rethink {
   color: white;
-  /* align-items: center; */
+  align-items: center;
   font-size: 50px;
   align-items: left;
-}
+} */
 
 /* .listings-container a.active {
   display: grid;

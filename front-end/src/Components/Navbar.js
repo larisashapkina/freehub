@@ -39,7 +39,7 @@ function Navbar({
 
   //       {localStorage.getItem("userId")?(
   //       <Link to={`/userprofile/${localStorage.getItem("userId")}`}>My profile </Link>):("")
-  //       } 
+  //       }
 
   //      {/* {localStorage.getItem("userId")?(<button onClick={logout}
   //         className="login">
@@ -78,7 +78,7 @@ function Navbar({
         </form>
       </div>
       <div id="nav-buttons">
-        <Link to="/saveyourworld">Be a Hero</Link>&nbsp;&nbsp;
+        <Link to="/saveyourworld">#ActNow</Link>&nbsp;&nbsp;
         <Link to="/listings" onClick={resetChooseCategory}>
           Listings
         </Link>
