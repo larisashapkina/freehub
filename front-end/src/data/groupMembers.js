@@ -11,7 +11,7 @@ const groupMembers = [
  description: `Through out my career in social services and in the food industry I saw a common problem outdated technology. Companies had to pay outside parties to either get new software or develop a new system. I became very attracted to how technology was changing and innovating the workforce which is why I decided to take the leap into a new career to pursue software engineering. I am now a full time fellow at Pursuit were I am becoming a software engineer. The lack of women of color in the industry has inspired me to continue to become successful in this new career.`,
  photo: "https://avatars.githubusercontent.com/u/87436175?v=4",
  github: "https://github.com/stephr10452",
- linkedin: "www.linkedin.com/in/stephanie-reyes-07263b162" 
+ linkedin: "https://www.linkedin.com/in/stephanie-reyes-07263b162" 
 },
 {name: "Sara D'Arce",
 description: `Becoming a full-stack web developer is directly related to my obsession with marrying music and technology,
