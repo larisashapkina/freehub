@@ -6,26 +6,28 @@
 
 #main-content {
   /* display: flex; */
-  /* height: 250px; */
+  /* height: 20%; */
   background-color: rgb(182, 236, 236);
   border: 1px solid teal;
 }
-/* 
+
 #main-content h2 {
+  color: white;
+}
+
+/* #main-content h1 {
   color: white;
 } */
 
-#main-content h1 {
-  color: white;
-}
-
 .left {
   float: left;
-  /* padding-left: 20px;   */
+  padding-left: 20px;  
 }
 
-.right {
+.rethink {
+  color: white;
   float: right;
+  padding-right: 20px;  
 }
 
 /* #main-content .rethink {

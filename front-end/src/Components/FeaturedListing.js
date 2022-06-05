@@ -23,7 +23,7 @@ function FeaturedListing() {
   }, []);
 
   let featured = featuredlisting
-    .filter((list) => list.id < 5)
+    .filter((list) => list.id < 7)
     .map((listing) => {
       let { title, image, id } = listing;
       return (

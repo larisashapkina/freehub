@@ -1,19 +1,18 @@
 #featured-listings-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin-top: 85px;
-  gap: 40px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  margin-top: 70px;
 }
 
 .featured-listings-card {
   background-color: white;
-  margin: 0px 55px 30px;
+  margin: 0px 30px 30px;
   height: fit-content;
-  max-width: 260px;
+  max-width: 220px;
   border-radius: 5px;
   text-align: center;
   min-height: 165px;
-  padding: 20px 5px 5px;
+  padding: 20px 5px 0px;
 
 }
 
