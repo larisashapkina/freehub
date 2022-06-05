@@ -19,14 +19,14 @@ const groupMembers = [
     photo: "https://avatars.githubusercontent.com/u/1423883?v=4",
     github: "https://github.com/SaraDArce",
     linkedin: "https://linkedin.com/in/saradarce/",
-    description: "",
+    description: `"To be nobody but yourself, in a world which is doing its best, night and day, to make you like everybody else - means to fight the hardest battle which any human being can fight - and never stop fighting." E.E. Cummings`,
   },
   {
     name: "Xiaoming Yang",
     photo: "https://avatars.githubusercontent.com/u/86433186?v=4",
     github: "https://github.com/xiaomingyang-git2021",
     linkedin: "https://www.linkedin.com/in/xiaoming-yang/",
-    description: "",
+    description: "To save the planet, we don’t have pretty words, we just have actions. Do more talk less",
   },
 ];
 
