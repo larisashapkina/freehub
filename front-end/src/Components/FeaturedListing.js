@@ -23,15 +23,15 @@ function FeaturedListing() {
   }, []);
 
   let featured = featuredlisting
-    .filter((list) => list.id < 5)
+    .filter((list) => list.id < 7)
     .map((listing) => {
       let { title, image, id } = listing;
       return (
-        <div>
+        <div className="featured-listings-card">
           {" "}
           <Link to={`/listings/${id}`}>
             <img className="image" src={image} alt={listing.title} />
-            <h5>{title}</h5>
+            <p>{title}</p>
           </Link>
         </div>
       );

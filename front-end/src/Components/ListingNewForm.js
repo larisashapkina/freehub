@@ -32,6 +32,7 @@ function ListingNew() {
 
   return (
     <div className="form">
+      New Listing Form
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">
           Category:

@@ -5,12 +5,13 @@
 } */
 
 #save-our-world-image {
-  height: 850px;
+  height: 1150px;
   background-position: bottom;
-  opacity: 60%;
-  background: url("https://www.concertmagnet.com/wp-content/uploads/2022/05/recycle-with-sky-and-grass-300x189.jpeg")
+  opacity: 70%;
+  background: url("https://www.concertmagnet.com/wp-content/uploads/2022/06/Screenshot-2022-06-02-at-5.42.22-PM-300x189.png")
     no-repeat left;
   background-size: cover;
+  
 }
 
 #actions-checklist {

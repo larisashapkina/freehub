@@ -1,12 +1,4 @@
-input[type="text"] {
-  width: 50%;
-  padding: 6px 20px;
-}
 
-input[type="submit"] {
-  width: 56.5%;
-  background-color: #45a049;
-}
 
 /* #home-image {
     border: 1px solid rgb(112, 233, 233);
@@ -17,12 +9,11 @@ input[type="submit"] {
 }  */
 
 .listings-container {
+  background-color: rgb(236, 247, 247);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  background-color: rgb(236, 247, 247);
   border: 3px solid teal;
   border-style: double;
-  padding: 25px;
   row-gap: 20px;
   justify-items: center;
 }
@@ -42,7 +33,7 @@ input[type="submit"] {
   } */
 
 #listingCard img {
-  border: 1px solid #ddd;
+  border: 3px solid #ddd;
   box-shadow: -4px -4px 10px -5px;
   border-radius: 4px;
   height: auto;
@@ -59,6 +50,7 @@ input[type="submit"] {
 #teamheader {
   color: solid white;
 }
+
 
 #teamContainer {
   display: grid;

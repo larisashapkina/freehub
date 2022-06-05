@@ -39,7 +39,7 @@ function Navbar({
 
   //       {localStorage.getItem("userId")?(
   //       <Link to={`/userprofile/${localStorage.getItem("userId")}`}>My profile </Link>):("")
-  //       } 
+  //       }
 
   //      {/* {localStorage.getItem("userId")?(<button onClick={logout}
   //         className="login">
@@ -78,28 +78,30 @@ function Navbar({
         </form>
       </div>
       <div id="nav-buttons">
-        <Link to="/saveyourworld">Be a Hero</Link>&nbsp;&nbsp;
+        <Link to="/saveyourworld"><button>#ActNow</button>&nbsp;</Link>
         <Link to="/listings" onClick={resetChooseCategory}>
-          Listings
+          <button>Listings</button>&nbsp;
         </Link>
-        &nbsp;&nbsp;
+       
         
         {localStorage.getItem("userId") ? (
           <Link onClick={logout} to="/">
+            <button>
             {" "}
             {text}{" "}
+            </button>
+            &nbsp;
           </Link>
         ) : (
-          <Link to="/login"> {text} </Link>
+          <Link to="/login"> <button>{text} </button>&nbsp; </Link>
         )}
         {localStorage.getItem("userId") ? (
           <Link to={`/userprofile/${localStorage.getItem("userId")}`}>
-            My profile{" "}
+            <button>Profile{" "}</button>&nbsp;
           </Link>
         ) : (
           ""
         )}
-        );
       </div>
       <div id="climate">{/* <climate-clock /> */}</div>
     </div>

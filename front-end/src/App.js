@@ -52,7 +52,7 @@ function App() {
       );
       setFilterResults(results);
     }
-  }, [selectedCategory]);
+}, [selectedCategory, listings]);
 
   function searchListings(searchInput, listings) {
     if (searchInput.length > 0) {

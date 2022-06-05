@@ -8,11 +8,10 @@ function Home() {
   return (
     <div>
       <div id="main-content">
-        <h2>Welcome {userName}!</h2>
-        <h1>Rethink. Reduce. Reuse.</h1>
+        <h2 className="left">Welcome {userName}!</h2>        
         <FeaturedListing />
       </div>
-      <div id="home-image"></div>
+      <div id="home-image"><h1 className="rethink">Rethink. Reduce. Reuse.</h1></div>
     </div>
   );
 }

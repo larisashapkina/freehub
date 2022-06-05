@@ -8,8 +8,8 @@ INSERT INTO users (firstname, lastname, username, password, email) VALUES
 ('John', 'Reez', 'maninasuit', '324234', 'jreez6742@nbc.com'),
 ('Sameen', 'Hsaw', 'xmyang', '9385733', 'sammhsaw@cbs.com'),
 ('Lionel', 'Fusco', 'goodcop', '937423462', 'lionfusco@cbs.com'),
-('Tom', 'Anderson', 'tanderson', '342324582374', 'tanderson3721@gmail.com'),
-('Harold', 'Finch', 'csgenius', '2343432', 'haroldf@gmail.com'),
+('Pat', 'Anderson', 'tanderson', '*****', 'patanderson@gmail.com'),
+('Jane', 'Finch', 'janefinch', '*****', 'haroldf@gmail.com'),
 ('Joss', 'Carter', 'detective', '432353443', 'josscar@yahoo.com');
 
 
