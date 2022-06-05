@@ -87,52 +87,52 @@ function ListingEditForm(){
         console.log(err);
       });
   };
-  return (
-    <div>
-      Edit Listing
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="name">
-          Category:
-          <select id="listing-category" name="category">
-            <option>--Select Category--</option>
-            <option>Furniture</option>
-            <option>Electronics</option>
-            <option>Clothing</option>
-            <option>Home</option>
-            <option>Motors</option>
-            <option>Toys</option>
-            <option>Beauty</option>
-            <option>Art</option>
-          </select>
-        </label>
-        <label htmlFor="title">Title:</label>
-        <input
-          id="title"
-          type="text"
-          onChange={handleTextChange}
-          value={userListing.title}
-          placeholder="Title"
-        />
-        <label htmlFor="description">Description:</label>
-        <input
-          id="description"
-          type="text"
-          value={userListing.description}
-          placeholder="Description"
-          onChange={handleTextChange}
-        />
-        <label htmlFor="image">Image:</label>
-        <input
-          id="image"
-          value={userListing.image}
-          type="text"
-          onChange={handleTextChange}
-          placeholder="Image"
-        />
-        <br />
-        <input type="submit" />
-      </form>
-    </div>
-  );
-}
+//   return (
+//     <div>
+//       Edit Listing
+//       <form onSubmit={handleSubmit}>
+//         <label htmlFor="name">
+//           Category:
+//           <select id="listing-category" name="category">
+//             <option>--Select Category--</option>
+//             <option>Furniture</option>
+//             <option>Electronics</option>
+//             <option>Clothing</option>
+//             <option>Home</option>
+//             <option>Motors</option>
+//             <option>Toys</option>
+//             <option>Beauty</option>
+//             <option>Art</option>
+//           </select>
+//         </label>
+//         <label htmlFor="title">Title:</label>
+//         <input
+//           id="title"
+//           type="text"
+//           onChange={handleTextChange}
+//           value={userListing.title}
+//           placeholder="Title"
+//         />
+//         <label htmlFor="description">Description:</label>
+//         <input
+//           id="description"
+//           type="text"
+//           value={userListing.description}
+//           placeholder="Description"
+//           onChange={handleTextChange}
+//         />
+//         <label htmlFor="image">Image:</label>
+//         <input
+//           id="image"
+//           value={userListing.image}
+//           type="text"
+//           onChange={handleTextChange}
+//           placeholder="Image"
+//         />
+//         <br />
+//         <input type="submit" />
+//       </form>
+//     </div>
+//   );
+// }
 export default ListingEditForm;
