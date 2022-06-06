@@ -155,7 +155,7 @@ function ListingDetails() {
       </div>
       <div className="user-all-listings">
         <h2>{user.username}'s Other Listings</h2>
-        <h3>Other options:</h3>
+        {/* <h3>Other options:</h3> */}
         <ul className="mappedlistings">
           <MappedListings options={options} />
         </ul>

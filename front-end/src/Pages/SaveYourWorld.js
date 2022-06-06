@@ -55,10 +55,8 @@ function SaveTheEarth() {
           </li>
           <br></br>
           <br></br>
-          <div id="climate">
-            <climate-clock />
-          </div>
         </ul>
+        <climate-clock />
         <img
           className="turtleplastic"
           src="https://www.condorferries.co.uk/remote.axd/condorlivemedia.azureedge.net/media/11088/plastic-in-the-ocean.jpg"

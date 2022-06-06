@@ -29,7 +29,8 @@ function LoginForm({ setUserName, setText }) {
         localStorage.setItem("userId", `${res.data.id}`);
         localStorage.setItem("username", `${res.data.username}`);
         setText("Logout");
-        navigate(`/userprofile/${res.data.id}`);
+        // navigate(`/userprofile/${res.data.id}`);
+        navigate("/");
       })
       .catch((err) => {
         setError(err.response.data.error);
@@ -41,6 +42,7 @@ function LoginForm({ setUserName, setText }) {
       <Error error={error} />
       <form onSubmit={handleSubmit}>
         <label htmlFor="username">Username/Email:</label>
+        <br />
         <input
           id="username"
           value={username.username}
@@ -50,6 +52,7 @@ function LoginForm({ setUserName, setText }) {
         />
         <br />
         <label htmlFor="password">Password:</label>
+        <br />
         <input
           id="password"
           value={password.password}
