@@ -7,9 +7,9 @@
 #save-our-world-image {
   height: 1150px;
   background-position: bottom;
-  opacity: 70%;
   background: url("https://www.concertmagnet.com/wp-content/uploads/2022/06/Screenshot-2022-06-02-at-5.42.22-PM-300x189.png")
     no-repeat left;
+    opacity: 80%;
   background-size: cover; 
 }
 
@@ -22,9 +22,10 @@
   text-decoration: underline 2px;
   text-underline-offset: 0.1em;
   padding-top: 80px;
-  padding-left: 30px;
-  
+  padding-left: 30px; 
 }
+
+
 
 /* background: url("https://www.concertmagnet.com/wp-content/uploads/2022/05/Screenshot-2022-05-23-at-12.55.35-AM-300x300.png")
   no-repeat;

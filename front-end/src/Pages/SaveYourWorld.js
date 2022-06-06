@@ -4,7 +4,7 @@ function SaveTheEarth() {
   return (
     <div>
       <div id="save-our-world-image">
-        <h1>URGENT ACTIONS to take RIGHT NOW:</h1>
+        <h1>TAKE THESE URGENT ACTIONS NOW:</h1>
         <ul>
           <li>
             <h2>
@@ -39,25 +39,31 @@ function SaveTheEarth() {
               are catching on! Divas & influencers: SCREAM it FROM the
               MOUNTAINTOPS!<br></br>
               <br></br>If you MUST use a single-use water bottle, REFILL it 2-3
-              times-especially the same day.<br></br>
-              Whales & marine life are dying with tummies FULL of plastic :({" "}
+              times-especially same day.<br></br>
+              Whales & marine life are dying from tummies FULL of plastic :({" "}
             </h2>
           </li>
           <li>
-            <h2>
-              TURN OFF the LIGHTS & SWITCH OFF the
-              power strip at night.
-            </h2>
+            <h2>TURN OFF the LIGHTS & SWITCH OFF the power strip at night.</h2>
           </li>
           <li>
             <h2>
-              DRASTIC CHANGE is NECESSARY. There is only 7 years left to cool the planet. 
-              <br></br><br></br>PLEASE RECYCLE & DON'T LITTER. We're almost OUT of TIME.
+              DRASTIC CHANGE is NEEDED, We've only 7 years before it's too late.
+              <br></br>
+              <br></br>PLEASE RECYCLE & DON'T LITTER. We're almost OUT of TIME.
             </h2>
           </li>
-          <br></br><br></br><br></br><br></br><br></br><br></br>
-          <div id="climate"><climate-clock /></div>
+          <br></br>
+          <br></br>
+          <div id="climate">
+            <climate-clock />
+          </div>
         </ul>
+        <img
+          className="turtleplastic"
+          src="https://www.condorferries.co.uk/remote.axd/condorlivemedia.azureedge.net/media/11088/plastic-in-the-ocean.jpg"
+          alt="Soon, oceans will have more plastic than fish."
+        ></img>
       </div>
     </div>
   );
