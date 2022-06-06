@@ -28,7 +28,7 @@ function App() {
   const [text, setText] = useState(
     localStorage.getItem("userId") ? "Logout" : "Login"
   );
-
+  
   // const navigate = useNavigate();
   useEffect(() => {
     axios.get(`${API}/listings`).then((response) => {

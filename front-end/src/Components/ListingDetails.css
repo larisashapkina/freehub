@@ -1,3 +1,4 @@
+
 .listing-details {
   box-shadow: -4px -4px 10px -5px;
   border: 1px solid red;
@@ -17,6 +18,208 @@
 h6 {
     justify-items: left;
 }
+
+.user-listings-container {
+  background-color: azure;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  padding: 80px;
+}
+
+.listing-card {
+  padding: 20px;
+  line-height: 50px;
+}
+
+.user-all-listings {
+  margin-top: 130px;
+}
+
+.mappedlistings {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+}
+
+.option {
+  padding: 5px;
+}
+.listing-card img {
+  width:300px;
+}
+
+.listing-card-button {
+  width: 90px;
+  padding: 5px;
+  margin-bottom: 50px;
+  font-size: 15px;
+  border: solid teal 1px;
+  border-radius: 5px;
+}
+
+.links .listing-contact-link {
+  /* border: 1px solid red; */
+  padding: 10px;
+  margin-top: 60px;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+.links .listing-contact-link:hover {
+  font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*    
+.details {
+
+  box-shadow: -4px -4px 10px -5px;
+  border: 1px solid red;
+  width: 350px;
+  text-align: center;
+  background-color: white;
+  grid-area: "details";
+} */
+
+/* .detailsimage{
+  justify-items: right;
+  padding: 20px;
+  width:  80px;
+  height: 80px;
+  object-fit: cover;
+} */
+
+/* h6 {
+    justify-items: left;
+} */
+/* 
+#other-listings-container{
+  border: solid red 2px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-area: "listings";
+} */
+
+/* #viewUsersListings {
+  display: flex;
+}
+
+.listing-details {
+  float: left;
+  box-shadow: -4px -4px 10px -5px;
+  width: 350px;
+  text-align: center;
+  background-color: white;
+}
+
+.listing-details-image {
+  justify-items: right;
+  padding: 5px;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+ul {
+  float: right;
+  grid-template-columns: 1fr, 1fr, 1fr;
+  grid-template-rows: auto;
+}
+h6 {
+  justify-items: left;
+}
+
+h2 {
+  float: right;
+}
+
+
+#other-listings-container {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  list-style: none;
+} */
+/* .usersOtherListings {
+  
+  background-color: rgb(236, 247, 247);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 3px solid teal;
+  border-style: double;
+  row-gap: 20px;
+  justify-items: center;
+  padding: 60px;
+} */
+
+
+/* #listingDetailsCard {
+  background-color: whitesmoke;
+  border: 1px solid darkgrey;
+  border-radius: 5px;
+  padding: 5px;
+  width: 250px;
+  text-align: left;
+  background-blend-mode: color-burn;
+} */
+
+/* h6 {
+      text-align: left;
+  } */
+
+/* #listingDetailsCard img {
+  justify-items: right;
+  padding: 25px;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border: 3px solid #ddd;
+  box-shadow: -4px -4px 10px -5px;
+  border-radius: 4px;
+  height: auto;
+  float: right;
+  padding: 10px;
+  object-fit: cover;
+} */
+
+
+/* .listing-details {
+  box-shadow: -4px -4px 10px -5px;
+  border: 1px solid red;
+  width: 350px;
+  text-align: center;
+  background-color: white;
+}
+
+.image{
+  justify-items: right;
+  padding: 20px;
+  width:  80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+h6 {
+    justify-items: left;
+} */
 
 /*    
 .details {
