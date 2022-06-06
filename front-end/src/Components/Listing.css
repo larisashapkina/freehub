@@ -1,19 +1,19 @@
-#listingCard {
+/* #listingCard {
   background-color: whitesmoke;
   border: 1px solid darkgrey;
   border-radius: 5px;
-  padding: 10px;
-  width: 350px;
+  padding: 5px;
+  width: 250px;
   text-align: left;
   background-blend-mode: color-burn;
-}
+} */
 
 
 /* h6 {
     text-align: left;
 } */
 
-#listingCard .image {
+/* #listingCard .image {
     border: 1px solid #ddd;
     box-shadow: -4px -4px 10px -5px;
     border-radius: 4px;
@@ -42,4 +42,4 @@
       text-align: center;
       width: 40%;
       margin: 40px 0 10px;
-  }
+  } */

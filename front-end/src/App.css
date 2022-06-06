@@ -57,14 +57,14 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.card {
+/* .card {
   box-shadow: -6px -6px 10px -5px;
   width: 300px;
   text-align: center;
   background-color: ghostwhite;
   margin: 0 auto;
   margin-bottom: 10px;
-}
+} */
 
 .cardPic {
   height: 400px;
