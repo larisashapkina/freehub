@@ -78,7 +78,7 @@ function Navbar({
         </form>
       </div>
       <div id="nav-buttons">
-        <Link to="/saveyourworld">#ActNow</Link>&nbsp;&nbsp;
+        <Link to="/saveyourworld">#ActInTime</Link>&nbsp;&nbsp;
         <Link to="/listings" onClick={resetChooseCategory}>
           Listings
         </Link>
