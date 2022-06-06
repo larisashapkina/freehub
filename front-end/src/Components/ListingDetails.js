@@ -139,13 +139,13 @@ function ListingDetails() {
               <button className="listing-card-button">Back</button>&nbsp;
           </Link>
             {/* <br/> */}
-                {userId?(<a className="listing-contact-link" href={"mailto:"+ user.email}>Contact about this item</a>):"" }
+                {userId?(<a className="listing-card-button" href={"mailto:"+ user.email}>Contact</a>):"" }
         </div>
 
       </div>
       <div className="user-all-listings">
-        <h2>Username: {user.username}</h2>
-        <h3>Other options:</h3>
+        <h2>{user.username}'s Other Listings:</h2>
+        {/* <h3>Other options:</h3> */}
         <ul className="mappedlistings">
           <MappedListings options={options}/>
         </ul>
