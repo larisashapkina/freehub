@@ -55,7 +55,7 @@ function SaveTheEarth() {
               <br></br><br></br>PLEASE RECYCLE & DON'T LITTER. We're almost OUT of TIME.
             </h2>
           </li>
-          <br></br><br></br>
+          <br></br><br></br><br></br><br></br><br></br><br></br>
           <div id="climate"><climate-clock /></div>
         </ul>
       </div>
