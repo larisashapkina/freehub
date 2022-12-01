@@ -1,7 +1,9 @@
 #featured-listings-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  margin-top: 70px;
+  display: flex;
+  gap: 10px;
+  margin: 70px 20px;
+  overflow-x: auto;
+  padding: 10px;
 }
 
 .featured-listings-card {

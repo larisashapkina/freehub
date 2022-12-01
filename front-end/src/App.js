@@ -7,7 +7,6 @@ import Index from "./Pages/Index";
 import Show from "./Pages/Show";
 import New from "./Pages/New";
 import Edit from "./Pages/Edit";
-import SaveYourWorld from "./Pages/SaveYourWorld";
 import CreateAccount from "./Pages/CreateAccount";
 import About from "./Components/About";
 import Footer from "./Components/Footer";
@@ -89,7 +88,6 @@ function App() {
           <Routes>
             <Route path="/" element={<Home userName={username} />} />
             {/* <Route path="/search" element={<SearchBar />} /> */}
-            <Route path="/saveyourworld" element={<SaveYourWorld />} />
             <Route
               path="/listings"
               element={

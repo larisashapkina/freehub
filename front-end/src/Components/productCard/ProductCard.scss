@@ -1,0 +1,32 @@
+.productCard {
+    width: 300px;
+    border: 1px solid #F5F6FB;
+    background-color: white;
+    
+    &:hover{
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+    &__image{
+        padding: 20px;
+      img {
+         width: 250px;
+         height: 200px;
+      }
+    }
+    
+    &__info{
+      text-align:center;
+      font-weight:600;
+      background-color: #F5F6FB;
+      padding: 15px;
+      
+    }
+    
+    &__price{
+      color: #92AD40;
+      padding-top: 10px;
+    }
+  }
+
+  
