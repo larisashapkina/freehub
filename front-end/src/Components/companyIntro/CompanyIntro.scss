@@ -1,0 +1,42 @@
+.companyIntro{
+  
+    font-family: Verdana, Arial, sans-serif;
+    height: 450px;
+    
+    
+    &__content{
+      margin-left: 20%;
+      padding-top: 80px;
+      width: 30%;
+    }
+    
+    &__intro{
+      font-size: 30px;
+      font-family: Cursive, Arial, sans-serif;
+      
+    }
+    &__name{
+      color: #92AD40;
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+   
+    &__greeting{
+      font-size: 15px;
+      margin-bottom: 25px;
+    }
+    &__button{
+      border: 1px solid black;
+      padding: 15px;
+      font-size: 13px;
+      text-transform: uppercase;
+      border-radius: 5px;
+      width: 35%;
+      text-align: center;
+      cursor: pointer;
+      
+      &:hover{
+         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+    }
+  }
