@@ -5,14 +5,20 @@ import './ProductCard.scss';
 function ProductCard({title, image}) {
 
 
-const truncateTitle = (title) =>{
-    if(title.lenght <= 30){
-        return title;
-    }else{
-        return title.slice(0,27) + "..."
-    }
-}
+    function truncateTitle(title){
 
+        if(title.length < 30){
+          return title;
+
+        }else{
+
+          let truncatedString = title.slice(0,27);
+    
+          let indexOfLastSpace = truncatedString.lastIndexOf(' ');
+          
+          return truncatedString.slice(0, indexOfLastSpace) + " " + "...";
+        }
+      }
 
 let formattedTitle = truncateTitle(title);
 
